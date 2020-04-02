@@ -1,0 +1,196 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software  Jingwei’s Homepage</title>
+<meta name="description" content="This is Dr. Jingwei Li’s homepage.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jingwei's Homepage">
+<meta property="og:title" content="Software">
+<meta property="og:url" content="https://jingwei87.github.io/software/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://jingwei87.github.io/software/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Jingwei's Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Jingwei's Homepage</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/publication/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/project/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/software/" >Software</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/student/" >Students</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/activity/" >Activities</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software">
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <h2 id="ted-balancing-storage-efficiency-and-data-confidentiality-with-tunable-encrypted-deduplication"><a href="ted/index.html">TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication</a></h2>
+<p>TED is a tunable encrypted deduplication approach for balancing the trade-off between data confidentiality and storage efficiency. It allows users to configure a storage blowup factor, under which the information leakage quantified by an information-theoretic measure is minimized for any input workload.</p>
+
+<h2 id="metadedup-deduplicating-metadata-in-encrypted-deduplication-via-indirection"><a href="metadedup/index.html">Metadedup: Deduplicating Metadata in Encrypted Deduplication via Indirection</a></h2>
+<p>Metadedup is a new encrypted deduplication storage system, which suppresses metadata storage by also applying deduplication to metadata. Its idea builds on indirection, which adds another level of metadata chunks that record metadata information. We find that metadata chunks are highly redundant in real-world workloads and hence can be effectively deduplicated. In addition, metadata chunks can be protected under the same encrypted deduplication framework, thereby providing confidentiality guarantees for metadata as well.</p>
+
+<h2 id="freqanalysis-information-leakage-in-encrypted-deduplication-via-frequency-analysis"><a href="freqanalysis/index.html">Freqanalysis: Information Leakage in Encrypted Deduplication via Frequency Analysis</a></h2>
+<p>The toolkit demonstrates the practical implication of frequency analysis against encrypted deduplication, from both attack and defense perspectives. It includes the attack and defense implementations against the FSL dataset, as well as a deduplication storage prototype based on an existing realistic deduplication system of data domain file system (DDFS).</p>
+
+<hr />
+
+<h2 id="reed-rekying-aware-encrypted-deduplication-storage"><a href="reed/index.html">REED: Rekying-aware Encrypted Deduplication Storage</a></h2>
+<p>REED is an encrypted deduplication storage system with rekeying enabled. It builds on a deterministic version of all-or-nothing transform (AONT) for secure and lightweight rekeying, while preserving the deduplication capability. It also exploits similarity to mitigate key generation overhead.</p>
+
+<hr />
+
+<h2 id="cdstore-toward-reliable-secure-and-cost-efficient-cloud-storage-via-convergent-dispersal"><a href="cdstore/index.html">CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal</a></h2>
+<p>CDStore builds on an augmented secret sharing scheme called convergent dispersal, which supports deduplication by using deterministic content-derived hashes as inputs to secret sharing. It combines convergent dispersal with two-stage deduplication to achieve both bandwidth and storage savings and be robust against side-channel attacks.</p>
+
+
+    </section>
+  </article>
+</div>
+    </div>
+
+    
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
