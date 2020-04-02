@@ -1,0 +1,419 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Jingwei's Homepage</title>
+<meta name="description" content="This is Dr. Jingwei Li’s homepage.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jingwei's Homepage">
+<meta property="og:title" content="Jingwei’s Homepage">
+<meta property="og:url" content="https://jingwei87.github.io/software/metadedup/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://jingwei87.github.io/software/metadedup/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Jingwei's Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Jingwei's Homepage</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/publication/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/project/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/software/" >Software</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/student/" >Students</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/activity/" >Activities</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/software/metadedup/overview.jpg"
+        
+        alt="">
+      
+      <h3>Metadedup</h3>
+      <p>Metadedup is an encrypted deduplication storage system with space-efficient metadata management. It records metadata information in another level called metadata chunks, which are highly redundant in real-world workloads and hence can be effectively deduplicated for storage efficiency. It also protects metadata chunks under the same encrypted deduplication framework, thereby providing confidentiality guarantees for metadata as well.</p>
+
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#publication">Publication</a></li>
+    </ul>
+  </li>
+  <li><a href="#dependencies">Dependencies</a></li>
+  <li><a href="#configurations">Configurations</a>
+    <ul>
+      <li><a href="#manual-configuration">Manual Configuration</a></li>
+      <li><a href="#auto-configuration">Auto Configuration</a></li>
+    </ul>
+  </li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#compatiability">Compatiability</a>
+    <ul>
+      <li><a href="#new-versions-of-openssl">New Versions of OpenSSL</a></li>
+      <li><a href="#gf-complete-installation-from-source">GF-Complete Installation from Source</a></li>
+    </ul>
+  </li>
+  <li><a href="#limitation">Limitation</a></li>
+  <li><a href="#downloads">Downloads</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="metadedup-deduplicating-metadata-in-encrypted-deduplication-via-indirection">Metadedup: Deduplicating Metadata in Encrypted Deduplication via Indirection</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Encrypted deduplication combines encryption and deduplication in a seamless way to provide confidentiality guarantees for the physical data in deduplication storage, yet it incurs substantial metadata storage overhead due to the additional storage of keys. We present a new encrypted deduplication storage system called Metadedup, which suppresses metadata storage by also applying deduplication to metadata. Its idea builds on indirection, which adds another level of metadata chunks that record metadata information. We find that metadata chunks are highly redundant in real-world workloads and hence can be effectively deduplicated. In addition, metadata chunks can be protected under the same encrypted deduplication framework, thereby providing confidentiality guarantees for metadata as well.</p>
+
+<h3 id="publication">Publication</h3>
+
+<ul>
+  <li>Jingwei Li, Patrick P. C. Lee, Yanjing Ren, and Xiaosong Zhang. <strong>Metadedup: Deduplicating Metadata in Encrypted Deduplication via Indirection</strong>. Proceedings of the 35th International Conference on Massive Storage Systems and Technology (MSST 2019), Santa Clara, U.S.A, May 2019.</li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>Metadedup is built on Ubuntu 14.04.5 LTS with GNU gcc version 6.5.0. It requires the following libraries:</p>
+
+<ul>
+  <li>OpenSSL (version: 1.0.2g)</li>
+  <li>Boost C++ library</li>
+  <li>GF-Complete</li>
+  <li>Leveldb</li>
+</ul>
+
+<p>To install OpenSSL, Boost C++ library, GF-complete and snappy (that is necessary for Leveldb), type the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libboost-all-dev libsnappy-dev libssl-dev libgf-complete-dev 
+</code></pre></div></div>
+<p>Leveldb is packed in <code class="highlighter-rouge">server/lib/</code>, and compile it using the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nt">-C</span> server/lib/leveldb/
+</code></pre></div></div>
+
+<h2 id="configurations">Configurations</h2>
+
+<p>Metadedup distributes data across n (4 by default) servers for storage, such that the original data can be retrieved provided that any k (3 by default) out of the n servers are available.</p>
+
+<h3 id="manual-configuration">Manual Configuration</h3>
+
+<h4 id="server">Server</h4>
+
+<p>Metadedup server processes data and metadata, separately. Compile the server program via the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nt">-C</span> server/
+</code></pre></div></div>
+
+<p>Start a Metadedup server by the following command. Here <code class="highlighter-rouge">meta port</code> and <code class="highlighter-rouge">data port</code> indicate the ports that are listened for data and metadata processing, respectively.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>server/SERVER <span class="o">[</span>meta port] <span class="o">[</span>data port]
+</code></pre></div></div>
+
+<p>Then, follow the above instructions, and start another n-1 servers.</p>
+
+<h4 id="client">Client</h4>
+
+<p>Edit the configuration file <code class="highlighter-rouge">client/config-u</code> to set server information for upload. Note that the configuration should be consistent with the IPs and ports of the n running servers.</p>
+
+<p>An example of <code class="highlighter-rouge">client/config-u</code> is shown as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0.0.0:11030 
+0.0.0.0:11031
+0.0.0.0:11032 
+0.0.0.0:11033
+0.0.0.0:11034
+0.0.0.0:11035
+0.0.0.0:11036
+0.0.0.0:11037
+</code></pre></div></div>
+<ul>
+  <li>Line 1-4 specify the IP addresses of 4 running servers, as well as corresponding meta ports.</li>
+  <li>Line 5-8 specify the IP addresses of 4 running servers, as well as corresponding data ports.</li>
+  <li>In this example, Line 1 and Line 5, Line 2 and Line 6, Line 3 and Line 7, and Line 4 and Line 8 correspond to the same server yet different ports for data and metadata processing, respectively.</li>
+</ul>
+
+<p>In addition, edit the configuration file <code class="highlighter-rouge">client/config-d</code> based on the same instruction above, in order to set server information for download. Note that Metadedup only needs to download data from any k out of n servers for retrieval. Thus, <code class="highlighter-rouge">client/config-d</code> includes the configuration for k necessary servers: the first k lines indicate the IP addresses and meta ports, and the last k lines indicate the IP addresses and data ports.</p>
+
+<p>Then, compile and generate an executable program for client.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make -C client/
+</code></pre></div></div>
+<p>Note that any changes of <code class="highlighter-rouge">client/config-u</code> or <code class="highlighter-rouge">client/config-d</code> do not require to re-compile client program.</p>
+
+<h4 id="changing-n-k">Changing (n, k)</h4>
+
+<p>You can modify the variables <code class="highlighter-rouge">n_</code> and <code class="highlighter-rouge">m_</code> in lines 47-50 in <code class="highlighter-rouge">client/utils/conf.hh</code>, in order to change the parameter setting (n, k) of Metadedup.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// default (n, k) configuration of Metadedup </span>
+<span class="n">n_</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">m_</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">k_</span> <span class="o">=</span> <span class="n">n_</span> <span class="o">-</span> <span class="n">m_</span><span class="p">;</span>
+<span class="n">r_</span> <span class="o">=</span> <span class="n">k_</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="highlighter-rouge">n_</code> is the total number of servers.</li>
+  <li><code class="highlighter-rouge">m_</code> is the fault tolerance degree.</li>
+  <li><code class="highlighter-rouge">k_</code> is the smallest number of servers required for successful retrieval.</li>
+  <li><code class="highlighter-rouge">r_</code> is the confidentiality degree.</li>
+</ul>
+
+<p>Note that the change of (n, k) parameter setting requires to re-compile server and client programs.</p>
+
+<h3 id="auto-configuration">Auto Configuration</h3>
+
+<p>We provide a shell script to automatically config Metadedup in default setting (i.e., n = 4 and k = 3):</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>auto/auto_config.sh
+</code></pre></div></div>
+<p>The shell script <code class="highlighter-rouge">auto/auto_config.sh</code> makes the following actions: (i) compile client; (ii) compile server; and (iii) replicate the compiled server folder to another three different folders (<code class="highlighter-rouge">server2/</code>,<code class="highlighter-rouge">server3/</code> and <code class="highlighter-rouge">server4/</code>), in order to config multiple servers. After that, each server program can be run by following the SERVER command.</p>
+
+<p>We also provide a shell script to clean the configuration.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>auto/auto_clean.sh
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Use the executable program <code class="highlighter-rouge">client/CLIENT</code> in the following way:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: CLIENT <span class="o">[</span>filename] <span class="o">[</span>userID] <span class="o">[</span>action] <span class="o">[</span>secutiyType]
+
+- <span class="o">[</span>filename]: full path of the file<span class="p">;</span>
+- <span class="o">[</span>userID]: user ID of current client<span class="p">;</span>
+- <span class="o">[</span>action]: <span class="o">[</span><span class="nt">-u</span><span class="o">]</span> upload<span class="p">;</span> <span class="o">[</span><span class="nt">-d</span><span class="o">]</span> download<span class="p">;</span>
+- <span class="o">[</span>securityType]: <span class="o">[</span>HIGH] AES-256 &amp; SHA-256<span class="p">;</span> <span class="o">[</span>LOW] AES-128 &amp; SHA-1
+</code></pre></div></div>
+
+<p>As an example, to upload a file <code class="highlighter-rouge">test</code> from user 0 using high security mechanism (e.g., AES-256 &amp; SHA-256), type the following command:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>client/CLIENT <span class="nb">test </span>0 <span class="nt">-u</span> HIGH
+</code></pre></div></div>
+
+<p>To download further the file <code class="highlighter-rouge">test</code>, follow the command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>client/CLIENT <span class="nb">test </span>0 <span class="nt">-d</span> HIGH
+</code></pre></div></div>
+
+<h2 id="compatiability">Compatiability</h2>
+
+<h3 id="new-versions-of-openssl">New Versions of OpenSSL</h3>
+
+<p>We develop Metadedup in Ubuntu 14.04 that can only be compatiable with an old version (e.g., 1.0.2) of OpenSSL. However, such old version is not supported by  recent Ubuntu systems. We provide a patch (that is tested on Ubuntu 18.04) to ensure that Metadedup can work with a new version of OpenSSL.</p>
+
+<p>Before patching, check the version of OpenSSL installed in your system:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>openssl version
+</code></pre></div></div>
+
+<p>You will get OpenSSL version like follows:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenSSL 1.1.0g 2 Nov 2017
+</code></pre></div></div>
+<p>If the version number is lower than 1.1.0 (e.g., version 1.0.2/1.0.1), you do not need to put the patch.</p>
+
+<p>If the version number is higher than 1.1.0, uncomment line 20 of <code class="highlighter-rouge">client/utils/CryptoPrimitive.hh</code>:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define OPENSSL_VERSION_1_1 1
+</span></code></pre></div></div>
+<p>You also need to uncomment line 20 of <code class="highlighter-rouge">server/utils/CryptoPrimitive.hh</code>.</p>
+
+<h3 id="gf-complete-installation-from-source">GF-Complete Installation from Source</h3>
+
+<p>Some Linux systems do not support to install GF-Complete from package managers. We provide instructions to install GF-Complete from source code.</p>
+
+<p>Download the source code of GF-Complete from <a href="http://lab.jerasure.org/jerasure/gf-complete/tree/master">here</a>, go into GF-Complete folder, and follow the commands for installation:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./configure
+<span class="nv">$ </span>make
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+</code></pre></div></div>
+
+<h2 id="limitation">Limitation</h2>
+
+<p>We assume that the upload and download channels are secure (e.g., encrypted and authenticated), and do not implement  SSL/TLS mechanisms upon our protection (e.g., CAONT-RS) of data.</p>
+
+<h2 id="downloads">Downloads</h2>
+<p><a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkeHgc_TJE5yAQzR?e=hRJVpz"><img src="https://img.shields.io/badge/freqanalysis-version
+    1.0-blue.svg" alt="" /></a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

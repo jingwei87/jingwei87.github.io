@@ -1,0 +1,568 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Jingwei's Homepage</title>
+<meta name="description" content="This is Dr. Jingwei Li’s homepage.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jingwei's Homepage">
+<meta property="og:title" content="Jingwei’s Homepage">
+<meta property="og:url" content="https://jingwei87.github.io/software/reed/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://jingwei87.github.io/software/reed/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Jingwei's Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Jingwei's Homepage</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/publication/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/project/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/software/" >Software</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/student/" >Students</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/activity/" >Activities</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/software/reed/overview.jpg"
+        
+        alt="">
+      
+      <h3>REED</h3>
+      <p>REED is an encrypted deduplication storage system with rekeying enabled. It builds on a deterministic version of all-or-nothing transform (AONT) for secure and lightweight rekeying, while preserving the deduplication capability. It also exploits similarity to mitigate key generation overhead.</p>
+
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#publications">Publications</a></li>
+    </ul>
+  </li>
+  <li><a href="#installation">Installation</a>
+    <ul>
+      <li><a href="#dependencies">Dependencies</a></li>
+      <li><a href="#instructions">Instructions</a></li>
+    </ul>
+  </li>
+  <li><a href="#reed-configurations">REED Configurations</a>
+    <ul>
+      <li><a href="#server">Server</a></li>
+      <li><a href="#key-manager">Key Manager</a></li>
+      <li><a href="#client">Client</a></li>
+    </ul>
+  </li>
+  <li><a href="#usage-examples">Usage Examples</a>
+    <ul>
+      <li><a href="#key-generation">Key Generation</a></li>
+      <li><a href="#file-upload">File Upload</a></li>
+      <li><a href="#file-download">File Download</a></li>
+      <li><a href="#rekeying">Rekeying</a></li>
+    </ul>
+  </li>
+  <li><a href="#limitations--known-bugs">Limitations &amp; Known Bugs</a></li>
+  <li><a href="#downloads">Downloads</a>
+    <ul>
+      <li><a href="#maintainers">Maintainers</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="reed">REED</h1>
+
+<p>This is a mirror (with minor changes) to the <a href="http://adslab.cse.cuhk.edu.hk/software/reed/">site</a>, where REED is first released.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>REED is an encrypted deduplication storage system with rekeying enabled. Specifically, it can replace an existing key with a new key so as to protect against key compromise and enable dynamic access control. REED builds on a deterministic version of all-or-nothing transform (AONT) for secure and lightweight rekeying, while preserving the deduplication capability. It also exploits similarity to mitigate key generation overhead. We implement a REED prototype with various performance optimization techniques.</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+  <li>
+    <p>Jingwei Li, Chuan Qin, Patrick P. C. Lee, and Jin Li. 
+<strong>Rekeying for Encrypted Deduplication Storage.</strong>
+Proceedings of the 46th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2016) (Regular paper), Toulouse, France, June 2016.</p>
+  </li>
+  <li>
+    <p>Chuan Qin, Jingwei Li, and Patrick P. C. Lee.
+<strong>The Design and Implementation of a Rekeying-aware Encrypted Deduplication Storage System.</strong>
+ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
+  </li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p>REED is built on Ubuntu 16.04 LTS with a g++ version of 5.1.0. It depends on the following libraries:</p>
+
+<ul>
+  <li><a href="https://www.openssl.org/source/openssl-1.0.2a.tar.gz">OpenSSL</a></li>
+  <li><a href="http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz">Boost C++ library</a></li>
+  <li><a href="https://gmplib.org/">GMP library</a></li>
+  <li><a href="https://github.com/google/leveldb/archive/master.zip">LevelDB</a></li>
+  <li><a href="http://acsc.cs.utexas.edu/cpabe/">CP-ABE toolkit</a></li>
+  <li><a href="https://crypto.stanford.edu/pbc/">PBC library</a></li>
+</ul>
+
+<p>We pack CP-ABE toolkit (version 0.11), GMP library (version 6.1.2), libbswabe (version 0.9) and PBC library (version 0.5.14) in <code class="highlighter-rouge">dependency/</code>. LevelDB (version 1.15.0) is also provided in <code class="highlighter-rouge">server/lib/</code>.</p>
+
+<h3 id="instructions">Instructions</h3>
+
+<p><strong>Step 1:</strong> Run the following commands to install OpenSSL and Boost C++ library.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libssl-dev libboost-all-dev
+</code></pre></div></div>
+
+<p><strong>Step 2:</strong> The GMP library depends on m4 that can be installed via the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>m4
+</code></pre></div></div>
+
+<p>Then, compile our provided GMP source to make install.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/gmp-6.1.2.tar <span class="o">&amp;&amp;</span> <span class="nb">cd </span>gmp-6.1.2/ 
+<span class="nv">$ </span>./configure
+<span class="nv">$ </span>make
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="nv">$ </span><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> gmp-6.1.2/
+</code></pre></div></div>
+
+<p>Optionally, run <code class="highlighter-rouge">make check</code> (before removing the extracted GMP directory) to check the correctness of the GMP library.</p>
+
+<p><strong>Step 3:</strong> The PBC library depends on flex and bison, both of which can be installed via the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>flex bison
+</code></pre></div></div>
+
+<p>Then, compile our provided PBC source to make install.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/pbc-0.5.14.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>pbc-0.5.14/ 
+<span class="nv">$ </span>./configure
+<span class="nv">$ </span>make
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="nv">$ </span><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> pbc-0.5.14/
+</code></pre></div></div>
+
+<p><strong>Step 4:</strong> The libbswabe depends on libglib2.0-dev which can be installed via the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libglib2.0-dev
+</code></pre></div></div>
+
+<p>Then, compile our provided libbswabe source to make install.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/libbswabe-0.9.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>libbswabe-0.9/ 
+<span class="nv">$ </span>./configure
+<span class="nv">$ </span>make
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="nv">$ </span><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> libbswabe-0.9/
+</code></pre></div></div>
+
+<p><strong>Step 5:</strong> Configure the cpabe package for installation.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/cpabe-0.11.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>cpabe-0.11/ 
+<span class="nv">$ </span>./configure
+</code></pre></div></div>
+
+<p>Informed by the solutions to <a href="https://stackoverflow.com/questions/10354053/ciphertext-policy-attribute-based-encryption-toolkit-make-error-with-libgmp">make error with libgmp</a> and <a href="https://stackoverflow.com/questions/17373306/error-in-linking-gmp-while-compiling-cpabe-package-from-its-source-code">error in linking gmp</a>, you need to make a few changes on the configuration files.</p>
+
+<p>First, add a line <code class="highlighter-rouge">-lgmp</code> into the definition of <code class="highlighter-rouge">LDFLAGS</code> (Line 14) in the Makefile. This makes the <code class="highlighter-rouge">LDFLAGS</code> like:</p>
+<div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">...</span>
+<span class="nv">LDFLAGS</span> <span class="o">=</span> <span class="nt">-O3</span> <span class="nt">-Wall</span> <span class="se">\</span>
+    <span class="nt">-lglib-2</span>.0  <span class="se">\</span>
+    <span class="nt">-Wl</span>,-rpath /usr/local/lib <span class="nt">-lgmp</span> <span class="se">\</span>
+    <span class="nt">-Wl</span>,-rpath /usr/local/lib <span class="nt">-lpbc</span> <span class="se">\</span>
+    <span class="nt">-lbswabe</span> <span class="se">\</span>
+    <span class="nt">-lcrypto</span> <span class="nt">-lcrypto</span> <span class="se">\ </span> <span class="c"># remember to add `</span><span class="se">\`</span> here
+    <span class="err">-lgmp</span> <span class="c"># newly added line
+</span><span class="err">...</span>
+</code></pre></div></div>
+
+<p>Second, add the missed semicolon in the Line 67 of the file policy_lang.y.</p>
+<div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">...</span>
+<span class="nl">result</span><span class="o">:</span> <span class="nf">policy { final_policy = $1; } </span><span class="c">#</span><span class="nf"> add the last (missed) semicolon</span>
+<span class="err">...</span>
+</code></pre></div></div>
+
+<p>Finally, make and install the library.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="nv">$ </span><span class="nb">cd</span> ../ <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> cpabe-0.11/
+</code></pre></div></div>
+
+<p><strong>Step 6:</strong> The LevelDB depends on libsnappy-dev, which can be installed via the following command.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libsnappy-dev
+</code></pre></div></div>
+
+<p>Then, compile and make the LevelDB that is located at <code class="highlighter-rouge">server/lib/</code>.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>server/lib/leveldb-1.15.0/ <span class="o">&amp;&amp;</span> make
+</code></pre></div></div>
+
+<h2 id="reed-configurations">REED Configurations</h2>
+
+<h3 id="server">Server</h3>
+
+<p>We include both datastore (for storing file related data and metadata) and keystore (for storing key information) in REED server. Compile server via the following command:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>server/ <span class="o">&amp;&amp;</span> make
+</code></pre></div></div>
+
+<p>Then, start a REED server by the following command. Here <code class="highlighter-rouge">port_1</code> and <code class="highlighter-rouge">port_2</code> direct to the datastore and keystore ports, respectively.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./SERVER <span class="o">[</span>port_1] <span class="o">[</span>port_2]
+</code></pre></div></div>
+
+<h3 id="key-manager">Key Manager</h3>
+
+<p>We have a key manager for key generation. Run the following commands to maintain key management service on the <code class="highlighter-rouge">port</code> of a machine.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>keymanager/ <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>./KEYMANAGER <span class="o">[</span>port]
+</code></pre></div></div>
+
+<h3 id="client">Client</h3>
+
+<p>Edit the configuration file <code class="highlighter-rouge">client/client.conf</code> to set the server and the key manager information (note the information should be consistent with the IP address and port configured for the server and key manager).</p>
+
+<ul>
+  <li>Line 1 specifies the number of servers in usage; currently we only support one server that combines the datastore and keystore.</li>
+  <li>Line 2 specifies the IP address and port of the configured key manager.</li>
+  <li>Line 3 specifies the IP address and port of the configured server (including both the datastore and keystore, see above).</li>
+</ul>
+
+<p>Compile and generate an executable program for client.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>client/ <span class="o">&amp;&amp;</span> make
+</code></pre></div></div>
+
+<h2 id="usage-examples">Usage Examples</h2>
+
+<p>After configuring all entities, we can use REED client for typical commands:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># keygen </span>
+<span class="nv">$ </span>./CLIENT <span class="nt">-k</span> <span class="o">[</span>attribute] <span class="o">[</span>private key filename]
+	
+<span class="c"># upload file </span>
+<span class="nv">$ </span>./CLIENT <span class="nt">-u</span> <span class="o">[</span>filename] <span class="o">[</span>policy] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
+    
+<span class="c"># download file </span>
+<span class="nv">$ </span>./CLIENT <span class="nt">-d</span> <span class="o">[</span>filename] <span class="o">[</span>private key filename] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
+	
+<span class="c"># rekeying file </span>
+<span class="nv">$ </span>./CLIENT <span class="nt">-r</span> <span class="o">[</span>filename] <span class="o">[</span>private key filename] <span class="o">[</span>new policy] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
+
+<span class="c"># parameters</span>
+<span class="c"># [filename]: full path of file</span>
+<span class="c"># [policy]: encryption policy of CA-ABE</span>
+<span class="c"># [attribute]: attribute for generating CP-ABE private key</span>
+<span class="c"># [security type]: {HIGH} AES-256 &amp; SHA-256; {LOW} AES-128 &amp; SHA-1</span>
+<span class="c"># [private key filename]: file used to store CP-ABE private key</span>
+</code></pre></div></div>
+
+<h3 id="key-generation">Key Generation</h3>
+
+<p>Before using REED, run key generation to generate private keys. To generate an ABE private key for user 1, run the example keygen command:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-k</span> <span class="s1">'id = 1'</span> sk_1
+</code></pre></div></div>
+
+<p>You can get the key file <code class="highlighter-rouge">sk_1</code> (located in <code class="highlighter-rouge">client/keys/sk/</code>) that stores the private key related to attribute <code class="highlighter-rouge">id = 1</code>. Note that the attribute is in the form of string (quoted by ' ') and a blank space is necessary before and after =. The format is consistent with the <a href="http://acsc.cs.utexas.edu/cpabe/tutorial.html">documentation</a> of the CP-ABE toolkit.</p>
+
+<h3 id="file-upload">File Upload</h3>
+
+<p>Suppose we want to upload a file (say <code class="highlighter-rouge">file</code>) with a policy that requires only user 1 or user 2 can access the file. Run the following command to use advanced protection of REED.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-u</span> file <span class="s1">'id = 1 or id = 2'</span> HIGH
+</code></pre></div></div>
+
+<p>When specifying the policy, make sure you own the private key whose attribute satisfies the policy. For example, in the above example, the private key with <code class="highlighter-rouge">id = 1</code> can decrypt the ciphertext under the policy <code class="highlighter-rouge">id = 1 or id = 2</code> successfully, but another private key with <code class="highlighter-rouge">id = 3</code> cannot.</p>
+
+<h3 id="file-download">File Download</h3>
+
+<p>Type the following command to download <code class="highlighter-rouge">file</code> with the private key <code class="highlighter-rouge">sk_1</code>:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-d</span> file sk_1 HIGH
+</code></pre></div></div>
+
+<p>The downloaded file will be renamed to be <code class="highlighter-rouge">file.d</code> automatically.</p>
+
+<p>Note that, the security type (e.g., <code class="highlighter-rouge">HIGH</code> in the above example) should be consistent with the pre-defined security type when uploading the file.</p>
+
+<h3 id="rekeying">Rekeying</h3>
+
+<p>To update the policy (e.g., <code class="highlighter-rouge">id = 1 or id = 2</code>) of <code class="highlighter-rouge">file</code> to a new policy <code class="highlighter-rouge">id = 1 or id = 3</code>, run the following command.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-r</span> file sk_1 <span class="s1">'id = 1 or id = 3'</span> HIGH
+</code></pre></div></div>
+
+<p>This revokes the access privilege of user 2 and grants user 3 to access <code class="highlighter-rouge">file</code>. Like file download, the security type should also be consistent with the pre-defined security type when uploading <code class="highlighter-rouge">file</code>.</p>
+
+<p>After rekeying, you can generate a new private key (to simulate the action of user 3) and download <code class="highlighter-rouge">file</code> using the key.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-k</span> <span class="s1">'id = 3'</span> sk_3
+<span class="nv">$ </span>./CLIENT <span class="nt">-d</span> file sk_3 HIGH
+</code></pre></div></div>
+
+<p>However, if using the private key of <code class="highlighter-rouge">id = 2</code>, you cannot decrypt <code class="highlighter-rouge">file</code> successfully.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./CLIENT <span class="nt">-k</span> <span class="s1">'id = 2'</span> sk_2
+<span class="nv">$ </span>./CLIENT <span class="nt">-d</span> file sk_2 HIGH
+
+<span class="c"># outputs</span>
+...
+cannot decrypt, attributes <span class="k">in </span>key <span class="k">do </span>not satisfy policy
+...
+</code></pre></div></div>
+
+<h2 id="limitations--known-bugs">Limitations &amp; Known Bugs</h2>
+
+<ul>
+  <li>
+    <p>In an ABE cryptosystem, a trusted party (e.g., authority) maintains an ABE master secret to generate ABE private keys. In REED, we do not implement the authority, and assume all REED clients own the system-wide master secret (that has already been generated). Each client can use the secret to generate its private keys (e.g., via the keygen interface).</p>
+  </li>
+  <li>
+    <p>We test REED with a special case of CP-ABE: (i) assign a single attribute (e.g., id) with private key and (ii) express policy in access tree with an OR gate connecting all authorized identifiers. We cannot guarantee REED works well with generic tree-based access control (that is supported by the CP-ABE toolkit).</p>
+  </li>
+  <li>
+    <p>We do not expose interface for lazy revocation (but we implement key regression for policy update). Currently, REED only supports active revocation that immediately revokes the access privileges of old keys.</p>
+  </li>
+  <li>
+    <p>In our test, REED works well with most of files. However, for a few files, we face chunking crashes in upload or integrity check failures (missing the data chunks in the last container) in download. The bugs possibly depend on the content of test files.</p>
+  </li>
+</ul>
+
+<h2 id="downloads">Downloads</h2>
+
+<p><a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkrnY82U-wqTrmwv?e=3iYpGt"><img src="https://img.shields.io/badge/reed-version
+    1.1-blue.svg" alt="" /></a> 
+<a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkjkrycBR47WK2UF?e=pNewom"><img src="https://img.shields.io/badge/reed-version
+    1.0-blue.svg" alt="" /></a></p>
+
+<p>Change Log:</p>
+
+<ul>
+  <li>Version 1.1 (November 2017)
+    <ul>
+      <li>Fix a bug of upload and download in Version 1.0.</li>
+      <li>Fix a bug of key management in Version 1.0.</li>
+      <li>Change upload and download interfaces in Version 1.0.</li>
+      <li>Include keygen and rekeying interfaces.</li>
+      <li>Create client.conf for easy configuration.</li>
+      <li>Include protection of stubs.</li>
+      <li>Include SSL communications.</li>
+      <li>Include key regression for policy update.</li>
+      <li>Include similarity-based key generation.</li>
+    </ul>
+  </li>
+  <li>Version 1.0 (April 2016)
+    <ul>
+      <li>First release</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="maintainers">Maintainers</h3>
+
+<ul>
+  <li>Origin maintainer:
+    <ul>
+      <li>Chuan Qin, CUHK, chintran27@gmail.com</li>
+    </ul>
+  </li>
+  <li>Current maintainers:
+    <ul>
+      <li>Yanjing Ren, UESTC, tinoryj@gmail.com</li>
+      <li>Jingang Ma, UESTC, demon64523@gmail.com</li>
+    </ul>
+  </li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

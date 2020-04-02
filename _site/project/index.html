@@ -1,0 +1,208 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Project  Jingwei’s Homepage</title>
+<meta name="description" content="This is Dr. Jingwei Li’s homepage.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jingwei's Homepage">
+<meta property="og:title" content="Project">
+<meta property="og:url" content="https://jingwei87.github.io/project/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://jingwei87.github.io/project/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Jingwei's Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Jingwei's Homepage</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/publication/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/project/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/software/" >Software</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/student/" >Students</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/activity/" >Activities</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Project">
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <h2 id="encrypted-deduplication-current-focus">Encrypted Deduplication (Current Focus)</h2>
+
+<p>Encrypted deduplication seamlessly combines encryption and deduplication to simultaneously achieve
+both data security and storage efficiency. It builds on the idea that encrypts each message 
+with a key derived from the content of the message itself, so that identical messages are
+always encrypted into identical ciphertexts for deduplication.</p>
+
+<p>In this project, we address the practical issues of the encrypted deduplication approach, in order
+to improve its usability in real systems.</p>
+
+<ul>
+  <li><a href="/software/ted/index.html">TED</a> proposes a tunable encrypted deduplication approach to balance data confidentiality and storage efficiency.</li>
+  <li><a href="/software/metadedup/index.html">Metadedup</a> presents encrypted deduplication storage with space-efficient metadata management.</li>
+  <li><a href="/software/freqanalysis/index.html">Freqanalysis toolkit</a> reveals the underlying security risk against encrypted deduplication.</li>
+  <li><a href="/software/reed/index.html">REED</a> augments encrypted deduplication storage systems with dynamic access control.</li>
+  <li><a href="/software/cdstore/index.html">CDStore</a> provides a unified multi-cloud storage solution with reliability, security and cost efficiency.</li>
+  <li><a href="http://doi.org/10.1109/TPDS.2013.284">Dekey</a> provides a cost-efficient way for managing large-scale convergent keys.</li>
+</ul>
+
+<hr />
+
+<h2 id="outsourced-attribute-based-cryptographic-primitives">Outsourced Attribute-based Cryptographic Primitives</h2>
+
+<p>In this project, we introduce outsourced computation into attribute-based primitives and enable to securely delegate the heavy computations from resource-constrained clients to third-party servers:</p>
+
+<ul>
+  <li>We propose various outsourced attribute-based encryption (ABE) primitives that can delegate the computation of <a href="/publication/jcs15.pdf">key generation</a> and <a href="/publication/icics12.pdf">encryption</a> to third party.</li>
+  <li>We augment outsourced decryption with <a href="/publication/tpds14check.pdf">checkability</a> that can verify the correctness of results.</li>
+  <li>We apply outsourcing computation to attribute-based signature and identity-based encryption, and delegate the <a href="http://doi.org/10.1109/TPDS.2013.2295809">sign</a> and <a href="/publication/tc15revoke.pdf">revocation</a> operation to third party, respectively.</li>
+</ul>
+
+
+    </section>
+  </article>
+</div>
+    </div>
+
+    
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

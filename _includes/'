@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "Publications"
+    url: /publication/
+  - title: "Projects"
+    url: /project/
+  - title: "Software"
+    url: /software/

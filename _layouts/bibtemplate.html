@@ -1,0 +1,52 @@
+---
+---
+
+<!-- <div class="text-justify">{{reference}}</div> -->
+
+{{reference}}
+{% if entry.note %}
+<i>{{ entry.note }}</i>
+{% endif %}
+
+<!-- <button class="button0"  onclick="toggleBibtex{{entry.key}}()">bibtex</button> -->
+{% if entry.url %}
+<a href="{{ entry.url }}"><input class="button1" type="button" value="pdf" /></a>
+{% endif %}
+
+{% if entry.code %}
+<a href="{{ entry.code }}"><input class="button2" type="button" value="code" /></a>
+{% endif %}
+
+
+{% if entry.doi %}
+<!-- <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" class="btn btn--success">doi</a> -->
+<a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button3" type="button" value="doi" /></a>
+{% endif %}
+
+{% if entry.slides %}
+<a href="{{ entry.slides }}"><input class="button5" type="button" value="slides" /></a>
+{% endif %}
+
+
+ 
+<button class="button4"  onclick="toggleBibtex{{entry.key}}()">bibtex</button><br>
+{% if entry.award %}
+<font color="red"><b>{{ entry.award }}</b></font>
+{% endif %}
+
+<p></p>
+
+<div id="a{{entry.key}}" style="display: none;">
+	<pre>{{entry.bibtex}}</pre>
+</div>
+
+<script>
+	function toggleBibtex{{entry.key}}(parameter) {
+		var x= document.getElementById('a{{entry.key}}');
+		if (x.style.display === 'none') {
+	        x.style.display = 'block';
+	    } else {
+	        x.style.display = 'none';
+		    }
+	}
+</script>

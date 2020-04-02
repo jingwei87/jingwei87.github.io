@@ -1,0 +1,493 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Jingwei's Homepage</title>
+<meta name="description" content="This is Dr. Jingwei Li’s homepage.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jingwei's Homepage">
+<meta property="og:title" content="Jingwei’s Homepage">
+<meta property="og:url" content="https://jingwei87.github.io/software/freqanalysis/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://jingwei87.github.io/software/freqanalysis/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Jingwei's Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Jingwei's Homepage</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/publication/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/project/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/software/" >Software</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/student/" >Students</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://jingwei87.github.io/activity/" >Activities</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/software/freqanalysis/overview.jpg"
+        
+        alt="">
+      
+      <h3>Freqanalysis Toolkit</h3>
+      <p>The toolkit demonstrates the practical implication of frequency analysis against encrypted deduplication, from both attack and defense perspectives. It includes the attack and defense implementations against the FSL dataset, as well as a deduplication storage prototype based on an existing realistic deduplication system of data domain file system (DDFS).</p>
+
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#publication">Publication</a></li>
+    </ul>
+  </li>
+  <li><a href="#preparation">Preparation</a></li>
+  <li><a href="#attacks">Attacks</a>
+    <ul>
+      <li><a href="#basic-attack">Basic Attack</a></li>
+      <li><a href="#locality-based-attack">Locality-based Attack</a></li>
+      <li><a href="#advanced-locality-based-attack">Advanced Locality-based Attack</a></li>
+    </ul>
+  </li>
+  <li><a href="#defenses">Defenses</a>
+    <ul>
+      <li><a href="#minhash-encryption">MinHash Encryption</a></li>
+      <li><a href="#scrambling">Scrambling</a></li>
+      <li><a href="#combined">Combined</a></li>
+    </ul>
+  </li>
+  <li><a href="#deduplication-prototype">Deduplication Prototype</a></li>
+  <li><a href="#outputs">Outputs</a>
+    <ul>
+      <li><a href="#attackdefense">Attack/Defense</a></li>
+      <li><a href="#deduplication-simulation">Deduplication Simulation</a></li>
+    </ul>
+  </li>
+  <li><a href="#downloads">Downloads</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="freqanalysis-toolkit">Freqanalysis Toolkit</h1>
+
+<p>This is a mirror (with minor changes) to the <a href="http://adslab.cse.cuhk.edu.hk/software/freqanalysis/">site</a>, where freqanalysis is first released.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Encrypted deduplication seamlessly combines encryption and deduplication to simultaneously achieve both data security and storage efficiency. State-of-the-art encrypted deduplication systems mostly adopt a deterministic encryption approach that encrypts each plaintext chunk with a key derived from the content of the chunk itself, so that identical plaintext chunks are always encrypted into identical ciphertext chunks for deduplication. However, such deterministic encryption inherently reveals the underlying frequency distribution of the original plaintext chunks. This allows an adversary to launch frequency analysis against the resulting ciphertext chunks, and ultimately infer the content of the original plaintext chunks.</p>
+
+<p>We study how frequency analysis practically affects information leakage in encrypted deduplication storage, from both attack and defense perspectives. We  propose a new inference attack that exploits chunk locality to increase the coverage of inferred chunks. We conduct trace-driven evaluation on a real-world dataset, and show that the new inference attack can infer a significant fraction of plaintext chunks under backup workloads. To protect against frequency analysis, we present two defense schemes, namely MinHash encryption and scrambling, which aim to disturb the frequency rank or break the chunk locality of ciphertext workloads. Our trace-driven evaluations show that our combined MinHash encryption and scrambling scheme effectively mitigates the inference attack, while incurring limited  storage and performance overhead.</p>
+
+<p>The toolkit includes the attack and defense implementations against the <a href="http://tracer.filesystems.org">FSL dataset</a>, as well as a deduplication storage prototype based on an existing realistic deduplication system of data domain file system (DDFS).</p>
+
+<h3 id="publication">Publication</h3>
+
+<ul>
+  <li>
+    <p>Jingwei Li, Patrick P. C. Lee, Chufeng Tan, Chuan Qin, and Xiaosong Zhang. Information Leakage in Encrypted Deduplication via Frequency Analysis: : Attacks and Defenses. ACM Transactions on Storage, 2019.</p>
+  </li>
+  <li>
+    <p>Jingwei Li, Chuan Qin, Patrick P. C. Lee, and Xiaosong Zhang. Information Leakage in Encrypted Deduplication via Frequency Analysis. In Proc. of IEEE/IFIP DSN, 2017. <em>Special thanks to Chufeng Tan for his help in preparing source code.</em></p>
+  </li>
+</ul>
+
+<h2 id="preparation">Preparation</h2>
+
+<p>The toolkit is running under Linux (e.g., Ubuntu 14.04) with a C++ compiler (e.g., g++). To run the programs, you need to install/compile the following dependencies.</p>
+
+<ul>
+  <li>Libssl API: run the command <code class="highlighter-rouge">sudo apt-get install libssl-dev</code> for installation.</li>
+  <li>Snappy compression library: run the command <code class="highlighter-rouge">sudo apt-get install libsnappy-dev</code> for installation.</li>
+  <li><a href="https://github.com/google/leveldb">Google Leveldb</a>: a version of 1.20 is provided in <code class="highlighter-rouge">util/</code>.</li>
+  <li><a href="http://tracer.filesystems.org/fs-hasher-0.9.4.tar.gz">fs-hasher</a>: a version
+  of 0.9.4 is provided in <code class="highlighter-rouge">util/</code>.</li>
+</ul>
+
+<p>All components of our toolkit depend on <code class="highlighter-rouge">fs-hasher</code> and <code class="highlighter-rouge">leveldb</code>. Before configuring each component (e.g., the attacks, the defenses, and the prototype), need to copy <code class="highlighter-rouge">util/fs-hasher/</code> and <code class="highlighter-rouge">util/leveldb/</code> into the corresponding directory (e.g., <code class="highlighter-rouge">attack/basic/</code>, <code class="highlighter-rouge">attack/locality/</code>, <code class="highlighter-rouge">defense/minhash/</code>, <code class="highlighter-rouge">defense/scrambling/</code>, <code class="highlighter-rouge">defense/combined/</code>, and <code class="highlighter-rouge">prototype/</code>) and compile them, respectively.</p>
+
+<p>For some machines, you may need to change the maximum number of open files allowed:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>su
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"* hard nofile 65535"</span> <span class="o">&gt;&gt;</span> /etc/security/limits.conf
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"* soft nofile 65535"</span> <span class="o">&gt;&gt;</span> /etc/security/limits.conf
+</code></pre></div></div>
+
+<h2 id="attacks">Attacks</h2>
+
+<p>We provide the basic and the locality-based attacks against encrypted deduplication.</p>
+
+<h3 id="basic-attack">Basic Attack</h3>
+
+<p>The basic attack builds on classical frequency analysis. Follow the following steps to simulate the basic attack.</p>
+
+<p><strong>Step 1, configure basic attack:</strong> modify variables in <code class="highlighter-rouge">attack/basic/basic_script.sh</code> to adapt expected settings:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">fsl</code> specifies the path of the FSL trace.</li>
+  <li><code class="highlighter-rouge">users</code> specifies which users are collectively considered in backups.</li>
+  <li><code class="highlighter-rouge">date_of_aux</code> specifies the backup of which date is considered as auxiliary information.</li>
+  <li><code class="highlighter-rouge">date_of_latest</code> specifies the latest backup of which date is the target for inference.</li>
+</ul>
+
+<p><strong>Step 2, run basic attack:</strong> type the following commands to compile and run the basic attack.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>attack/basic/ <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>./basic_script.sh
+</code></pre></div></div>
+
+<h3 id="locality-based-attack">Locality-based Attack</h3>
+
+<p>The locality-based attack exploits chunk locality to improve attack severity. To simulate the locality-based attack, follow the steps below.</p>
+
+<p><strong>Step 1, configure locality-based attack:</strong> In addition to the common variables (e.g., <code class="highlighter-rouge">fsl</code>, <code class="highlighter-rouge">users</code>, <code class="highlighter-rouge">date_of_aux</code> and <code class="highlighter-rouge">date_of_latest</code>), the locality-based attack builds on four specific parameters that are defined in <code class="highlighter-rouge">attack/locality/locality_script.sh</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">u</code> specifies the number of most frequent chunk pairs to be returned by frequency analysis in initializing the inferred set.</li>
+  <li><code class="highlighter-rouge">v</code> specifies the number of most frequent chunk pairs to be returned by frequency analysis in each iteration.</li>
+  <li><code class="highlighter-rouge">w</code> specifies the maximum number of ciphertext-plaintext chunk pairs that can be held by the inferred set.</li>
+</ul>
+
+<p><strong>Step 2, run locality-based attack:</strong> type the following commands to compile and run the locality-based attack.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>attack/locality/ <span class="o">&amp;&amp;</span> make 
+<span class="nv">$ </span>./locality_script.sh
+</code></pre></div></div>
+
+<h3 id="advanced-locality-based-attack">Advanced Locality-based Attack</h3>
+
+<p>The advanced locality-based attack specifically targets variable-size chunks generated from content-defined chunking. It leverages the size information to increase the severity of locality-based attack.</p>
+
+<p>Like the locality-based attack, the advanced locality-based attack is configured by the parameters <code class="highlighter-rouge">u</code>, <code class="highlighter-rouge">v</code>, <code class="highlighter-rouge">w</code>, and <code class="highlighter-rouge">leakage_rate</code>, which are defined in <code class="highlighter-rouge">attack/advanced/advanced_script.sh</code>. To compile and run the attack, type the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd attack/advanced/ &amp;&amp; make 
+$ ./advanced_script.sh
+</code></pre></div></div>
+
+<h2 id="defenses">Defenses</h2>
+
+<p>We provide the MinHash encryption, the scrambling, and the combination of both to defend against frequency analysis.</p>
+
+<h3 id="minhash-encryption">MinHash Encryption</h3>
+
+<p>MinHash encryption derives an encryption key based on the minimum fingerprint over a set (called segment) of adjacent chunks, such that some identical plaintext chunks can be encrypted into multiple distinct ciphertext chunks thereby disturbing frequency rank. To simulate the MinHash encryption, follow the steps below.</p>
+
+<p><strong>Step 1, configure MinHash encryption:</strong> the MinHash encryption builds on two parameters that are defined in <code class="highlighter-rouge">defense/minhash/k_minhash.cc</code>:</p>
+
+<ul>
+  <li>Segment size: the MinHash implementation uses variable-size segmentation and identifies segment boundary based on chunk fingerprints. By default, we set the average segment size, maximum segment size and minimum segment size at 1MB, 2MB and 512KB, respectively. It is feasible to change segment sizes by modifying macro variables <code class="highlighter-rouge">SEG_SIZE</code>, <code class="highlighter-rouge">SEG_MIN</code> and <code class="highlighter-rouge">SEG_MAX</code>; note that when changing  <code class="highlighter-rouge">SEG_SIZE</code>, it is needed to adjust the code in line 112 of <code class="highlighter-rouge">defense/minhash/k_minhash.cc</code> to adapt the global divisor, for example if the average segment size is 512KB and 2MB, the line of code should be changed as follows.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span>sq_size + size <span class="o">&gt;</span> SEG_MAX <span class="o">||</span> <span class="o">(</span>sq_size <span class="o">&gt;=</span> SEG_MIN <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="nb">hash</span><span class="o">[</span>5] <span class="o">&lt;&lt;</span> <span class="no">3</span><span class="sh">) &gt;&gt; 3 == 0x1f))	// correspond to an average segment size of 512KB 
+if (sq_size + size &gt; SEG_MAX || (sq_size &gt;= SEG_MIN &amp;&amp; (hash[5] &lt;&lt; 1) &gt;&gt; 1 == 0x7f))	// correspond to an average segment size of 2MB
+</span></code></pre></div></div>
+
+<ul>
+  <li>K: our implementation supports k-MinHash that derives an encryption key from a random k-minimum fingerprint of a segment. By default, we use MinHash and set <code class="highlighter-rouge">K_MINHASH</code> by 1.</li>
+</ul>
+
+<p><strong>Step 2, configure locality-based attack:</strong> it is identical to the Step 1 of the guideline of locality-based attack, except the attack parameters (e.g., <code class="highlighter-rouge">u</code>, <code class="highlighter-rouge">v</code> and <code class="highlighter-rouge">w</code>) locate in <code class="highlighter-rouge">defense/minhash/minhash.sh</code>.</p>
+
+<p><strong>Step 3, run MinHash encryption to defend against locality-based attack:</strong> type the following commands to compile and run.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>defense/minhash/ <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>./minhash.sh
+</code></pre></div></div>
+
+<h3 id="scrambling">Scrambling</h3>
+
+<p>Scrambling disturbs the processing sequence of chunks, so as to prevent an adversary from correctly identifying the neighbors of each chunk in the locality-based attack. To simulate the scrambling scheme, follow the steps below.</p>
+
+<p><strong>Step 1, configure scrambling scheme:</strong> Like MinHash encryption, scrambling works on a segment basis, and builds on three parameters of <code class="highlighter-rouge">SEG_SIZE</code>, <code class="highlighter-rouge">SEG_MIN</code> and <code class="highlighter-rouge">SEG_MAX</code> to define variable-size segmentation. You can follow the Step 1 of the guideline of MinHash encryption to configure these parameters that are defined in <code class="highlighter-rouge">defense/scrambling/scrambling.cc</code>.</p>
+
+<p><strong>Step 2, configure locality-based attack:</strong> it is identical to the Step 1 of the guideline of locality-based attack, except the attack parameters (e.g., <code class="highlighter-rouge">u</code>, <code class="highlighter-rouge">v</code> and <code class="highlighter-rouge">w</code>) locate in <code class="highlighter-rouge">defense/scrambling/scrambling.sh</code>.</p>
+
+<p><strong>Step 3, run scrambling to defend against locality-based attack:</strong> type the following commands to compile and run.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>defense/scrambling/ <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>./scrambling.sh
+</code></pre></div></div>
+
+<h3 id="combined">Combined</h3>
+
+<p>We also introduce a combined scheme that first scrambles the orders of chunks in a segment basis, and then encrypts each chunk via MinHash encryption. The guideline of the attack is identical with that of MinHash encryption.</p>
+
+<h2 id="deduplication-prototype">Deduplication Prototype</h2>
+
+<p>We design and implement a deduplication-based storage prototype based on DDFS. The key design is to store unique chunks in logical order and further exploit chunk locality to accelerate deduplication. Instead of storing actual data, our prototype works on metadata level. You can follow the following steps to evaluate the metadata access overhead of either message-locked encryption (MLE) or the combined scheme based on our prototype.</p>
+
+<p><strong>Step 1, configure prototype:</strong> the prototype builds on two types of parameters, all of which are defined in <code class="highlighter-rouge">prototype/ddfs.cc</code>:</p>
+
+<ul>
+  <li>
+    <p>The cache-related parameter is the size <code class="highlighter-rouge">LRU_SIZE</code> of fingerprint cache. Note that we describe <code class="highlighter-rouge">LRU_SIZE</code> by the maximum number of fingerprints that the cache can hold.</p>
+  </li>
+  <li>
+    <p>The Bloom filter-related parameters include the maximum number <code class="highlighter-rouge">BLOOM_lenth</code> of entries in the Bloom filter array, and the false positive rate <code class="highlighter-rouge">ERROR</code> of Bloom filter.</p>
+  </li>
+</ul>
+
+<p><strong>Step 2, configure encryption scheme:</strong> we provide the deduplication simulation from the ciphertext chunks by either the MLE or the combined scheme. You can configure the parameters of the combined scheme by modifying <code class="highlighter-rouge">SEG_MIN</code>, <code class="highlighter-rouge">SEG_MAX</code>, <code class="highlighter-rouge">SEG_SIZE</code>, and <code class="highlighter-rouge">K_MINHASH</code> in <code class="highlighter-rouge">prototype/combined.cc</code> (see the Step 1 of the guideline of MinHash encryption).</p>
+
+<p><strong>Step 3, run storage simulation:</strong> type the following commands to compile and run the simulation.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>prototype/ <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>./combined.sh  // run the combined scheme
+<span class="nv">$ </span>./mle.sh  // run the MLE scheme
+</code></pre></div></div>
+
+<h2 id="outputs">Outputs</h2>
+
+<h3 id="attackdefense">Attack/Defense</h3>
+
+<p>The output format of attack/defense is shown as follows.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">==========================</span><span class="n">Attack</span><span class="o">/</span><span class="n">Defense</span><span class="o">==========================</span>
+<span class="n">Auxiliary</span> <span class="n">information</span><span class="o">:</span> <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="p">;</span> 	<span class="n">Target</span> <span class="n">backup</span><span class="o">:</span> <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span>
+<span class="p">[</span><span class="n">Parameters</span><span class="o">:</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">=</span> <span class="p">...]</span>
+<span class="n">Total</span> <span class="n">number</span> <span class="n">of</span> <span class="n">unique</span> <span class="n">ciphertext</span> <span class="n">chunks</span><span class="o">:</span> <span class="n">X</span>
+<span class="p">[</span><span class="n">Leakage</span> <span class="n">rate</span><span class="o">:</span> <span class="p">...]</span>
+<span class="n">Correct</span> <span class="n">inferences</span><span class="o">:</span> <span class="n">Y</span>
+<span class="n">Inference</span> <span class="n">rate</span><span class="o">:</span> <span class="p">...</span>
+
+<span class="n">Successfully</span> <span class="n">inferred</span> <span class="n">following</span> <span class="n">chunks</span><span class="o">:</span>
+<span class="p">......</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">X</code> is the number of unique ciphertext chunks in the encryption of the target backup, while <code class="highlighter-rouge">Y</code> is the number of (unique) chunks that can be successfully inferred by the attacks. The inference rate is computed by <code class="highlighter-rouge">Y/X</code>, that is slightly affected by the sorting algorithm in frequency analysis. The reason is different sorting algorithms may break tied chunks (that have the same frequency counts) in different ways and lead to (slightly) different results. The <code class="highlighter-rouge">parameters</code> and <code class="highlighter-rouge">leakage rate</code> are only available in the simulation of locality-based attack and its defense. We output the fingerprints of inferred plaintext chunks in both attack and  defense simulation.</p>
+
+<h3 id="deduplication-simulation">Deduplication Simulation</h3>
+
+<p>We output the metadata access overhead in storage simulation in the following format:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fslhomes-userX-YYYY-MM-DD
+Index access: A
+Update access: B
+Loading access: C
+</code></pre></div></div>
+
+<p>The information elaborates the metadata access overhead of storing user <code class="highlighter-rouge">X</code>’s backup on the date of <code class="highlighter-rouge">YYYY-MM-DD</code>. The metadata access overhead includes index access, update access and loading access, all of which are evaluated in the unit of times.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<p><a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkYnfU4WFzIUI9-R?e=0lMOpj"><img src="https://img.shields.io/badge/freqanalysis-version
+    1.2-blue.svg" alt="" /></a> 
+<a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkUShd-MqV4teEVL?e=NgMDdB"><img src="https://img.shields.io/badge/freqanalysis-version
+    1.1-blue.svg" alt="" /></a> 
+<a href="https://1drv.ms/u/s!Ag5HtH0OZTFMlkQby86DoCfNUbem?e=hDvouc"><img src="https://img.shields.io/badge/freqanalysis-version
+    1.0-blue.svg" alt="" /></a></p>
+
+<p>Change Log:</p>
+
+<ul>
+  <li>Version 1.2 (March 2019)
+    <ul>
+      <li>Include advanced locality-based attack</li>
+    </ul>
+  </li>
+  <li>Version 1.1 (November 2017)
+    <ul>
+      <li>Fix a bug of variable-size segmentation in Version 1.0.</li>
+      <li>Include new defenses: a scrambling scheme, and a combined scheme of MinHash encryption and scrambling.</li>
+      <li>Include a deduplication prototype based on DDFS.</li>
+    </ul>
+  </li>
+  <li>Version 1.0 (June 2017)
+    <ul>
+      <li>First release</li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

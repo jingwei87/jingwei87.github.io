@@ -1,0 +1,84 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.button1 {
+	background-color: $danger-color;
+	border: none;
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 1px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button2 {
+	background-color: $success-color;
+	border: none;
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 1px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button3 {
+	background-color: $warning-color;
+	border: none;
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 1px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button4 {
+	background-color: $primary-color;
+	border: none;
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 1px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.button5 {
+	background-color: $info-color;
+	border: none;
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 1px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
