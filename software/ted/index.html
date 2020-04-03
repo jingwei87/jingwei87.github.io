@@ -214,7 +214,7 @@
             </nav>
           </aside>
         
-        <h1 id="balancing-storage-efficiency-and-data-confidentiality-with-tunable-encrypted-deduplication">Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication</h1>
+        <h1 id="ted-balancing-storage-efficiency-and-data-confidentiality-with-tunable-encrypted-deduplication">TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication</h1>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -273,11 +273,11 @@ cmake <span class="nt">-DCMAKE_BUILD_TYPE</span><span class="o">=</span>Release 
 
 <p>TED builds on CM-Sketch to count the frequency of each plaintext chunk. You can configure the parameters of CM-Sketch in <code class="highlighter-rouge">./include/define.h</code>, in order to decide: (i) whether using CM-Sketch for count; (ii) if yes, the width and depth of CM-Sketch.</p>
 
-<pre><code class="language-C++">/**sketch configuration*/
-#define SKETCH_ENABLE 1  // 1: using sketch 0: using hash table
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*sketch configuration*/</span>
+<span class="cp">#define SKETCH_ENABLE 1  // 1: using sketch 0: using hash table
 #define SKETCH_DEPTH 4 // the depth of sketch
 #define SKETCH_WIDTH (2&lt;&lt;20) // the width of sketch
-</code></pre>
+</span></code></pre></div></div>
 
 <p>In addition, since TED is a simulator working on the fingerprints of chunks, you need to specify the number of bytes taken by each fingerprint in <code class="highlighter-rouge">./include/define.h</code>. For example, for FSL trace, it is 6 bytes; for MS trace, it is 5 bytes.</p>
 
