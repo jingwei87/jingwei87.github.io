@@ -8,7 +8,7 @@ sidebar:
   text: "TED is a tunable encrypted deduplication approach for balancing the trade-off between data confidentiality and storage efficiency. It allows users to configure a storage blowup factor, under which the information leakage quantified by an information-theoretic measure is minimized for any input workload."
 ---
 
-# Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication
+# TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication
 
 ## Introduction
 
@@ -66,8 +66,8 @@ To use TED, switch your current working directory to `TED/`.
 
 TED builds on CM-Sketch to count the frequency of each plaintext chunk. You can configure the parameters of CM-Sketch in `./include/define.h`, in order to decide: (i) whether using CM-Sketch for count; (ii) if yes, the width and depth of CM-Sketch.
 
-```C++
-/**sketch configuration*/
+```c++
+/*sketch configuration*/
 #define SKETCH_ENABLE 1  // 1: using sketch 0: using hash table
 #define SKETCH_DEPTH 4 // the depth of sketch
 #define SKETCH_WIDTH (2<<20) // the width of sketch
