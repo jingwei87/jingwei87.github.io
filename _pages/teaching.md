@@ -5,14 +5,12 @@ permalink: /teaching/index.html
 ---
 
 ## Current 
-- K0606020 信息安全基础综合设计实验 
-- 0808127026 Object-Oriented Technology
 
 ## Past
 - K0606020 信息安全基础综合设计实验 
-	- Spring 2017, Spring 2018, Spring 2019
+	- Spring 2017, Spring 2018, Spring 2019, Spring 2020
 - 0808127026 Object-Oriented Technology
-  - Spring 2019
+  - Spring 2019, Spring 2020
 - E0600645 数据结构与算法实验 
 	- Fall 2016
 

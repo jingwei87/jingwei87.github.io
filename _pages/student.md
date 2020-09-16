@@ -5,8 +5,6 @@ permalink: /student/index.html
 ---
 
 ## Undergraduate Students
-- **Wei, Yake**, Nov 2018-now
-	- Publication: ITME 2019 (2nd author)
 
 - **Wei, Guoli**, Sep 2019-now
 
@@ -22,10 +20,20 @@ permalink: /student/index.html
 
 - **Huang, Suyu**, Master, Sep 2019-now 
 
+- **Tang, Xingpeng**, Master, Sep 2020-now
+
+- **Xia, Wenniu**, Master, Sep 2020-now
+
 --- 
 
 ## Alumni
+
 ### Selective Undergraduate Students
+
+- **Wei, Yake**, Nov 2018-Sep 2020
+	- Publication: ITME 2019 (2nd author)
+  - First employment: Phd student in 中国人民大学
+
 - **Ren, Yanjing**, Sep 2017-Sep 2019 
 	- Awards: Interdisciplinary Contest In Modeling (Meritorious Winner); 2017年高教杯全国大学生数学建模竞赛四川省一等奖; 2018年ASC世界大学生超级计算机竞赛二等奖 
 	- Publication: MSST 2019 (3rd author)
