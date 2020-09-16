@@ -8,11 +8,9 @@ permalink: /student/index.html
 
 - **Wei, Guoli**, Sep 2019-now
 
-- **Xing, Pengzhi**, Sep 2019-now
-
-- **Ji, Xinyuan**, Sep 2019-now
-
 - **Liang, Jiacheng**, Dec 2019-now
+
+- **Lv, He**, Sep 2020-now
 
 ## Graduate Students
 - **Ren, Yanjing**, Master, Sep 2019-now
