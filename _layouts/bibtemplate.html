@@ -13,9 +13,14 @@
 <a href="{{ entry.url }}"><input class="button1" type="button" value="pdf" /></a>
 {% endif %}
 
+{% if entry.supp-url %}
+<a href="{{ entry.supp-url }}"><input class="button1" type="button" value="supplementary pdf" /></a>
+{% endif %}
+
 {% if entry.code %}
 <a href="{{ entry.code }}"><input class="button2" type="button" value="code" /></a>
 {% endif %}
+
 
 
 {% if entry.doi %}

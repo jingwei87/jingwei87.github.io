@@ -10,13 +10,12 @@ permalink: /student/index.html
 
 - **Liang, Jiacheng**, Dec 2019-now
 
-- **Lv, He**, Sep 2020-now
-
 ## Graduate Students
 - **Ren, Yanjing**, Master, Sep 2019-now
-  - Publication: Eurosys 2020 (3rd author)
+  - Publications: Eurosys 2020 (3rd author), TC 2021 (3rd author)
 
 - **Huang, Suyu**, Master, Sep 2019-now 
+  - Publications: TC 2021 (2nd author)
 
 - **Tang, Xingpeng**, Master, Sep 2020-now
 
