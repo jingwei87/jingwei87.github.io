@@ -299,7 +299,7 @@ TEDStore provides store and restore interfaces to client.
 
 ## Downloads
 
-[![](https://img.shields.io/badge/ted-version 1.0-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkuWmmTD9Z8fU5iN?e=XoZrdC)
+[![](https://img.shields.io/badge/ted-version 1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EeUpm9cA19RNo6ZeGJSiDlMBdYFVUVO3GyWudE6_BLE1Kg?e=aM62gu)
 
 ## Maintainers
 

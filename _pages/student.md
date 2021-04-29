@@ -9,10 +9,11 @@ permalink: /student/index.html
 - **Wei, Guoli**, Sep 2019-now
 
 - **Liang, Jiacheng**, Dec 2019-now
+  - 
 
 ## Graduate Students
 - **Ren, Yanjing**, Master, Sep 2019-now
-  - Publications: Eurosys 2020 (3rd author), TC 2021 (3rd author)
+  - Publications: ATC 2021 (1st author), TC 2021 (3rd author), Eurosys 2020 (3rd author)
 
 - **Huang, Suyu**, Master, Sep 2019-now 
   - Publications: TC 2021 (2nd author)
@@ -20,6 +21,8 @@ permalink: /student/index.html
 - **Tang, Xingpeng**, Master, Sep 2020-now
 
 - **Xia, Wenniu**, Master, Sep 2020-now
+
+- **Xiao, Hengying**, Master, Sep 2021-now
 
 --- 
 

@@ -279,9 +279,9 @@ cannot decrypt, attributes in key do not satisfy policy
 ## Downloads
 
 [![](https://img.shields.io/badge/reed-version
-    1.1-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkrnY82U-wqTrmwv?e=3iYpGt) 
+    1.1-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EdNOTuKVMYRDnWiG_k-Ms9YBo1uOI_j9DqOigyPG3Cr4vw?e=f0xclk) 
 [![](https://img.shields.io/badge/reed-version
-    1.0-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkjkrycBR47WK2UF?e=pNewom)
+    1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EU1a3flAMQBBru4Kd8BEHR0Bk1I-HtleJEc6By_6HzY_gQ?e=5RiCmz)
 
 Change Log:
 

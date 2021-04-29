@@ -143,11 +143,11 @@ $ ./CLIENT test 1 -d LOW
 ## Downloads
 
 [![](https://img.shields.io/badge/cdstore-version
-    1.2-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkLR8IgX6lzmRDw3?e=Lz9hNy) 
+    1.2-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/ETZNMsXXhWFIrY7j4TQWyPEBpo_K83X5jenpMnOJO-KM_A?e=bmoksz) 
 [![](https://img.shields.io/badge/cdstore-version
-    1.1-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkN5xafz1082TiPm?e=R6Wfeo) 
+    1.1-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/Ec-Aw_EcsuFKtkprJl10nvIBPfFmqT6QI4bs02t9jYjIag?e=9ntiCF) 
 [![](https://img.shields.io/badge/cdstore-version
-    1.0-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkGkllMWvDONt-x-?e=VsVUXh) 
+    1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/ESJiQB-6F3dBolbDMrEJM38ByEgKsozcZhr4pEMqfqTVhA?e=zsjxjl) 
 
 Change Log:
 

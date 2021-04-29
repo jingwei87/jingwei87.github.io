@@ -11,7 +11,7 @@ both data security and storage efficiency. It builds on the idea that encrypts e
 with a key derived from the content of the message itself, so that identical messages are
 always encrypted into identical ciphertexts for deduplication.
 
-In this project, we address the practical issues of the encrypted deduplication approach, in order
+In this project, we address the practical issues of  encrypted deduplication, in order
 to improve its usability in real systems.   
 
 - [TED](/software/ted/index.html) proposes a tunable encrypted deduplication approach to balance data confidentiality and storage efficiency.

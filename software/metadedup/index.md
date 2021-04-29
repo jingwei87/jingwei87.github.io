@@ -179,5 +179,15 @@ $ sudo make install
 We assume that the upload and download channels are secure (e.g., encrypted and authenticated), and do not implement  SSL/TLS mechanisms upon our protection (e.g., CAONT-RS) of data. 
 
 ## Downloads
-[![](https://img.shields.io/badge/freqanalysis-version
-    1.0-blue.svg)](https://1drv.ms/u/s!Ag5HtH0OZTFMlkeHgc_TJE5yAQzR?e=hRJVpz)
+
+[![](https://img.shields.io/badge/metadedup-version
+    1.1-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/Eaqe8EXCrh1EiMo5BSzXKsgBKL2azteeK53M2axm5YhHrA?e=GT2aEp)
+[![](https://img.shields.io/badge/metadedup-version
+    1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EZ7tFaKgCkBAkQf7HMeogwMBLrCdjtlm4mncWWyQEXQmdw?e=FhiYKf)
+
+Change Log:
+
+- Version 1.1 (June 2020)
+  - Add the implementation of a distributed key management approach 
+- Version 1.0 (April 2019)
+  - First release

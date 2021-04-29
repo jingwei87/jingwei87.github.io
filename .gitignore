@@ -1,3 +1,8 @@
 .sass-cache
 .DS_Store
 vendor/
+
+#publish.sh#
+.#publish.sh
+_bibliography/auto/
+_site/publish.sh
