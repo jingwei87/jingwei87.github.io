@@ -19,3 +19,9 @@ git add .
 git commit -a -m $msg
 wait
 
+git branch -D master
+git checkout -b master
+git filter-branch --subdirectory-filter _site/ -f
+wait
+git checkout source
+git push --all origin
