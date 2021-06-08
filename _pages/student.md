@@ -9,7 +9,7 @@ permalink: /student/index.html
 - **Wei, Guoli**, Sep 2019-now
 
 - **Liang, Jiacheng**, Dec 2019-now
-  - 
+
 
 ## Graduate Students
 - **Ren, Yanjing**, Master, Sep 2019-now

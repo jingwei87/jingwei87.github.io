@@ -3,6 +3,8 @@ layout: splash
 title: Software
 permalink: /software/
 ---
+## [SGXDedup: Accelerating Encrypted Deduplication via SGX](sgxdedup/index.html)
+SGXDedup is an SGX-based encrypted deduplication system with high performance.
 
 ## [TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication](ted/index.html)
 TED is a tunable encrypted deduplication approach for balancing the trade-off between data confidentiality and storage efficiency. It allows users to configure a storage blowup factor, under which the information leakage quantified by an information-theoretic measure is minimized for any input workload.

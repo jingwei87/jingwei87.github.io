@@ -14,6 +14,7 @@ always encrypted into identical ciphertexts for deduplication.
 In this project, we address the practical issues of  encrypted deduplication, in order
 to improve its usability in real systems.   
 
+- [SGXDedup](/software/sgxdedup/index.html) implements a high performance encrypted deduplication system via SGX.
 - [TED](/software/ted/index.html) proposes a tunable encrypted deduplication approach to balance data confidentiality and storage efficiency.
 - [Metadedup](/software/metadedup/index.html) presents encrypted deduplication storage with space-efficient metadata management. 
 - [Freqanalysis toolkit](/software/freqanalysis/index.html) reveals the underlying security risk against encrypted deduplication. 

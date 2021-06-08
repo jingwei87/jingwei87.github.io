@@ -10,11 +10,15 @@
 
 <!-- <button class="button0"  onclick="toggleBibtex{{entry.key}}()">bibtex</button> -->
 {% if entry.url %}
-<a href="{{ entry.url }}"><input class="button1" type="button" value="pdf" /></a>
+<a href="{{ entry.url }}"><input class="button1" type="button" value="main" /></a>
 {% endif %}
 
 {% if entry.supp-url %}
-<a href="{{ entry.supp-url }}"><input class="button1" type="button" value="supplementary pdf" /></a>
+<a href="{{ entry.supp-url }}"><input class="button1" type="button" value="supplementary" /></a>
+{% endif %}
+
+{% if entry.tech-url %}
+<a href="{{ entry.tech-url }}"><input class="button1" type="button" value="report" /></a>
 {% endif %}
 
 {% if entry.code %}
