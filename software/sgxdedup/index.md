@@ -1,11 +1,11 @@
 ---
 layout: single
-permalink: /software/sgxdedup/ 
+permalink: /software/sgxdedup/
 toc: true
 sidebar:
 - title: SGXDedup
-  image: /software/sgxdedup/overview.jpg
-  text: "SGXDedup is an SGX-based encrypted deduplication system with high performance."
+  image: /software/sgxdedup/arch.jpg
+  text: "SGXDedup is an SGX-based encrypted deduplication system with high performance. It directly runs sensitive operations in SGX enclaves, so as to improve the performance of encrypted deduplication, while maintaining its security, bandwidth efficiency, and storage efficiency."
 ---
 
 
@@ -80,7 +80,7 @@ SGXDedup is configured based on JSON. You can change its configuration without r
     "KeyServerConfig": {
         "_keyBatchSize": 4096, // Maximum number of keys obtained per communication
         "_keyEnclaveThreadNumber": 1, // Maximum thread number for key enclave
-        "_keyServerRArequestPort": 1559, // Key server host port for receive key enclave remote attestation request 
+        "_keyServerRArequestPort": 1559, // Key server host port for receive key enclave remote attestation request
         "_keyServerIP": [
             "127.0.0.1"
         ], // Key server host IP ()
@@ -100,8 +100,8 @@ SGXDedup is configured based on JSON. You can change its configuration without r
         "_maxContainerSize": 8388608 // Maximum space for one-time persistent chunk storage, Uint: Byte (Maximum size 8MB)
     },
     "pow": {
-        "_quoteType": 0, // Enclave quote type, do not modify it 
-        "_iasVersion": 3, // Enclave IAS version, do not modify it 
+        "_quoteType": 0, // Enclave quote type, do not modify it
+        "_iasVersion": 3, // Enclave IAS version, do not modify it
         "_iasServerType": 0, // Server IAS version, do not modify it
         "_batchSize": 4096, // POW enclave batch size (Unit: chunks)
         "_ServerPort": 6669, // The port on storage server for remote attestation
@@ -111,8 +111,8 @@ SGXDedup is configured based on JSON. You can change its configuration without r
         "_SecSubscriptionKey": "" // Your Intel remote attestation service secondary subscription key
     },
     "km": {
-        "_quoteType": 0, // Enclave quote type, do not modify it 
-        "_iasVersion": 3, // Enclave IAS version, do not modify it 
+        "_quoteType": 0, // Enclave quote type, do not modify it
+        "_iasVersion": 3, // Enclave IAS version, do not modify it
         "_iasServerType": 0, // Server IAS version, do not modify it
         "_ServerPort": 6676, // The port on storage server for remote attestation
         "_enclave_name": "km_enclave.signed.so", // The enclave library name to create the target enclave
@@ -128,7 +128,7 @@ SGXDedup is configured based on JSON. You can change its configuration without r
         "_raSessionKeylifeSpan": 259200000 // Time interval for key regression (Unit: seconds), used for storage server. Should be consistent with "KeyServerConfig._keyRegressionIntervals"
     },
     "client": {
-        "_clientID": 1, // Current client ID 
+        "_clientID": 1, // Current client ID
         "_sendChunkBatchSize": 1000, // Maximum number of chunks sent per communication
         "_sendRecipeBatchSize": 100000 // Maximum number of file recipe entry sent per communication
     }
@@ -211,4 +211,4 @@ Note that we do not provide any commandline interface for renewing blinded key. 
 
 ## Downloads
 
-[![](https://img.shields.io/badge/sgxdedup-version 1.0-blue.svg)](https://link.jscdn.cn/sharepoint/aHR0cHM6Ly91ZXN0Y2NzLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL2p3bGlfdWVzdGNjc19vbm1pY3Jvc29mdF9jb20vRVRJbmF4MnVNU3hQcUs4V09XcDV0RG9CLTBpZkhJa01FM01RMkc3dF92a3NoQT9lPUVXTUVSUw.zip)
+[![](https://img.shields.io/badge/sgxdedup-version 1.0-blue.svg)](https://www.icloud.com.cn/iclouddrive/016qFqA__XH_iX4Mu0xdtsAOQ#SGXDedup-1)

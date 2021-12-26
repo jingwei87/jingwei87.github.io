@@ -15,18 +15,18 @@ This is a mirror (with minor changes) to the [site](http://adslab.cse.cuhk.edu.h
 
 ## Introduction
 
-CDStore builds on an augmented secret sharing scheme called convergent dispersal, which supports deduplication by using deterministic content-derived hashes as inputs to secret sharing. It combines convergent dispersal with two-stage deduplication to achieve both bandwidth and storage savings and be robust against side-channel attacks. 
+CDStore builds on an augmented secret sharing scheme called convergent dispersal, which supports deduplication by using deterministic content-derived hashes as inputs to secret sharing. It combines convergent dispersal with two-stage deduplication to achieve both bandwidth and storage savings and be robust against side-channel attacks.
 
 ### Publications
 
 - Mingqiang Li, Chuan Qin, Jingwei Li, and Patrick P. C. Lee.
 	**"CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal."**
-	IEEE Internet Computing, 20(3), pp. 45-53, May-June 2016 (Special issue: Cloud Storage).  
+	IEEE Internet Computing, 20(3), pp. 45-53, May-June 2016 (Special issue: Cloud Storage).
 	(An earlier version appeared in USENIX ATC 2015)
 
 
-- Mingqiang Li, Chuan Qin, and Patrick P. C. Lee 
-	**"CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal."** 
+- Mingqiang Li, Chuan Qin, and Patrick P. C. Lee
+	**"CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal."**
 	Proceedings of USENIX Annual Technical Conference (ATC 2015), Santa Clara, CA, July 2015.
 
 
@@ -55,19 +55,19 @@ Type the following commands to compile GF_Complete in `client/lib/gf_complete`:
 ```shell
 $ cd client/lib/gf_complete
 $ ./configure
-$ make 
+$ make
 $ sudo make install
 ```
 
 ## Configurations
 
-After installing the necessary libraries, following the instructions to configure CDStore server and client.  
+After installing the necessary libraries, following the instructions to configure CDStore server and client.
 
 ### Server
 
-CDStore requires at least 4 servers for reliability. You need to configure and `make` them, respectively. In a successfully configured server, it has a directory `server/meta/` which stores the deduplication index, file recipes and share containers. 
+CDStore requires at least 4 servers for reliability. You need to configure and `make` them, respectively. In a successfully configured server, it has a directory `server/meta/` which stores the deduplication index, file recipes and share containers.
 
-After a successful `make`, you will get the server program `SERVER`. You can start it by the following command, where `[port]` is the port that CDStore server serves in.  
+After a successful `make`, you will get the server program `SERVER`. You can start it by the following command, where `[port]` is the port that CDStore server serves in.
 
 ```shell
 $ ./SERVER [port]
@@ -75,7 +75,7 @@ $ ./SERVER [port]
 
 ### Client
 
-Modify the configuration file `client/config` to specify the server information. For example, if you have run 4 servers with `./SERVER [port]` on machines: 
+Modify the configuration file `client/config` to specify the server information. For example, if you have run 4 servers with `./SERVER [port]` on machines:
 
 ```shell
 0.0.0.0 with port 11030
@@ -95,11 +95,11 @@ You need to change `client/config` to:
 
 Optionally, you can make advanced configure by modifying the total number of servers (4 by default), fault tolerance degree (1 by default), and security degree (0 by default) in `client/config`.
 
-After all configurations, change directory to `client/` and type `make` to create client program `CLIENT`.  
+After all configurations, change directory to `client/` and type `make` to create client program `CLIENT`.
 
 ### Quick Start
 
-We provide scripts `auto_config.sh` and `auto_clean.sh` for quick configurations. You can run `./auto_config.sh` to compile and configure 4 servers, and run `./auto_clean.sh` to reset all configurations. 
+We provide scripts `auto_config.sh` and `auto_clean.sh` for quick configurations. You can run `./auto_config.sh` to compile and configure 4 servers, and run `./auto_clean.sh` to reset all configurations.
 
 
 ## Usage
@@ -115,7 +115,7 @@ usage: ./CLIENT [filename] [userID] [action] [secutiyType]
 - [securityType]: [HIGH] AES-256 & SHA-256; [LOW] AES-128 & SHA-1
 ```
 
-We show two usage examples:  
+We show two usage examples:
 
 ```shell
 // upload a file `test` from user 0 using high security mechanism (e.g., AES-256 & SHA-256)
@@ -129,9 +129,9 @@ $ ./CLIENT test 1 -d LOW
 
 ## Limitations & Known Bugs
 
-- We assume the upload and download channels are secure (e.g., encrypted and authenticated), and do not implement mechanism for protection. We also assume that the user ID (input by CDStore client) is correct, so as to ensure the two-stage deduplication robust against side-channel attacks.    
+- We assume the upload and download channels are secure (e.g., encrypted and authenticated), and do not implement mechanism for protection. We also assume that the user ID (input by CDStore client) is correct, so as to ensure the two-stage deduplication robust against side-channel attacks.
 
-- When encode a test file generated via `urandom`, CDStore sometimes aborts with some errors like 
+- When encode a test file generated via `urandom`, CDStore sometimes aborts with some errors like
 	```shell
 	Error in region multiply operation.
 	The source & destination pointers must be aligned with respect to each other along a 16 byte boundary.
@@ -143,11 +143,11 @@ $ ./CLIENT test 1 -d LOW
 ## Downloads
 
 [![](https://img.shields.io/badge/cdstore-version
-    1.2-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/ETZNMsXXhWFIrY7j4TQWyPEBpo_K83X5jenpMnOJO-KM_A?e=bmoksz) 
+    1.2-blue.svg)](https://www.icloud.com.cn/iclouddrive/073VzOwa7IdwX47TKRdrcbfFQ#cdstore-1)
 [![](https://img.shields.io/badge/cdstore-version
-    1.1-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/Ec-Aw_EcsuFKtkprJl10nvIBPfFmqT6QI4bs02t9jYjIag?e=9ntiCF) 
+    1.1-blue.svg)](https://www.icloud.com.cn/iclouddrive/0a3DK6su07wfECkAMf5KqJC0w#cdstore-1)
 [![](https://img.shields.io/badge/cdstore-version
-    1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/ESJiQB-6F3dBolbDMrEJM38ByEgKsozcZhr4pEMqfqTVhA?e=zsjxjl) 
+    1.0-blue.svg)](https://www.icloud.com.cn/iclouddrive/0bfDkAXULcvtZWYRzIudrBrBQ#cdstore-1)
 
 Change Log:
 
@@ -158,7 +158,7 @@ Change Log:
 	- Encode the file pathname through CAONT-RS
 
 - Version 1.0.0 (May 2015)
-	- First release 
+	- First release
 
 ### Maintainers
  * Current maintainers

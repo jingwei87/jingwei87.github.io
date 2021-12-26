@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /software/ted/ 
+permalink: /software/ted/
 toc: true
 sidebar:
 - title: TED
@@ -31,10 +31,10 @@ efficiency and data confidentiality, with small performance overhead.
 
 ## Prerequisites
 
-We test TED and TEDStore under Ubuntu 18.04 and 16.04 (note that to run TEDStore, your machine needs to have at least 4GB memory). They require OpenSSL ([version 1.1.1d](https://www.openssl.org/source/openssl-1.1.1d.tar.gz)), Leveldb ([version 1.22](https://github.com/google/leveldb/archive/1.22.tar.gz)), Boost C++ library, and Snappy. Our test compiles TED and TEDStore using CMake 3.17 and GNU GCC 7.4.0.     
+We test TED and TEDStore under Ubuntu 18.04 and 16.04 (note that to run TEDStore, your machine needs to have at least 4GB memory). They require OpenSSL ([version 1.1.1d](https://www.openssl.org/source/openssl-1.1.1d.tar.gz)), Leveldb ([version 1.22](https://github.com/google/leveldb/archive/1.22.tar.gz)), Boost C++ library, and Snappy. Our test compiles TED and TEDStore using CMake 3.17 and GNU GCC 7.4.0.
 
 ```shell
-sudo apt-get install libboost-all-dev libsnappy-dev 
+sudo apt-get install libboost-all-dev libsnappy-dev
 
 # openssl
 wget -O - https://www.openssl.org/source/openssl-1.1.1d.tar.gz | tar -xz
@@ -43,9 +43,9 @@ cd ./openssl-1.1.1d/
 cd ..
 
 # leveldb
-wget -O - https://github.com/google/leveldb/archive/1.22.tar.gz | tar -xz 
-mkdir -p ./leveldb-1.22/build && cd "$_" 
-cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . 
+wget -O - https://github.com/google/leveldb/archive/1.22.tar.gz | tar -xz
+mkdir -p ./leveldb-1.22/build && cd "$_"
+cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 cd ../../
 
 mkdir -p ${PATH_TO_TED}/lib/
@@ -56,13 +56,13 @@ cp -r openssl-1.1.1d/ ${PATH_TO_TEDStore}/lib/openssl
 cp -r leveldb-1.22/ ${PATH_TO_TEDStore}/lib/leveldb
 ```
 
-## TED 
+## TED
 
 TED implements a simulator to analyze the trade-off of different encrypted deduplication approaches, including symmetric-key encryption, message-locked encryption (MLE), MinHash encryption and TED itself.
 
 To use TED, switch your current working directory to `TED/`.
 
-### Configuration 
+### Configuration
 
 TED builds on CM-Sketch to count the frequency of each plaintext chunk. You can configure the parameters of CM-Sketch in `./include/define.h`, in order to decide: (i) whether using CM-Sketch for count; (ii) if yes, the width and depth of CM-Sketch.
 
@@ -73,7 +73,7 @@ TED builds on CM-Sketch to count the frequency of each plaintext chunk. You can 
 #define SKETCH_WIDTH (2<<20) // the width of sketch
 ```
 
-In addition, since TED is a simulator working on the fingerprints of chunks, you need to specify the number of bytes taken by each fingerprint in `./include/define.h`. For example, for FSL trace, it is 6 bytes; for MS trace, it is 5 bytes.    
+In addition, since TED is a simulator working on the fingerprints of chunks, you need to specify the number of bytes taken by each fingerprint in `./include/define.h`. For example, for FSL trace, it is 6 bytes; for MS trace, it is 5 bytes.
 
 ```c++
 #define FP_SIZE (6) // for FSL trace
@@ -81,7 +81,7 @@ In addition, since TED is a simulator working on the fingerprints of chunks, you
 ```
 
 
-### Build 
+### Build
 
 We provide a script to build TED. You can run it as follows:
 
@@ -89,17 +89,17 @@ We provide a script to build TED. You can run it as follows:
 bash ./script/setup.sh
 ```
 This produces executable files in `./bin`.
- 
+
 
 ### Usage
 
 TED simulates the results of five encrypted deduplication approaches.
 
-- *Basic TED (bTED)*, which follows TED but using a fixed balance parameter t. 
+- *Basic TED (bTED)*, which follows TED but using a fixed balance parameter t.
 - *Full TED (fTED)*, which implements the full version of TED and automatically configures t for a given storage blowup factor b.
-- *MinHash encryption*, which encrypts each chunk with a key derived from the minimum fingerprint over a set of its adjacent chunks. 
-- *MLE*, which encrypts each chunk with a key derived from the chunk itself. 
-- *SKE*, which uses random symmetric key for encryption. 
+- *MinHash encryption*, which encrypts each chunk with a key derived from the minimum fingerprint over a set of its adjacent chunks.
+- *MLE*, which encrypts each chunk with a key derived from the chunk itself.
+- *SKE*, which uses random symmetric key for encryption.
 
 You can run the executable file (in `./bin/`) of each approach as follows.
 
@@ -114,13 +114,13 @@ You can run the executable file (in `./bin/`) of each approach as follows.
 # usage for fTED
 ./TEDSim [inFile] [outFile] fted [batchSize] [b] [keygenDistribution]
 ```
-- `inFile` is a list of chunk fingerprints; an example of `inFile` can be found in `./example/`. 
-- `outFile` specifies the output file name of the command; specifically, you will obtain two output files, namely `outFile.pfreq` and `outFile.cfreq`, which contain the frequency distributions of plaintext and ciphertext chunks, respectively. 
+- `inFile` is a list of chunk fingerprints; an example of `inFile` can be found in `./example/`.
+- `outFile` specifies the output file name of the command; specifically, you will obtain two output files, namely `outFile.pfreq` and `outFile.cfreq`, which contain the frequency distributions of plaintext and ciphertext chunks, respectively.
 - `method` specifies the approach that you want to test, and it can be `minhash`, `mle`, `ske`, `bted` and `fted`.
 - `t` defines the balance parameter of bTED.
 - `b` defines the storage blowup factor of fTED.
-- `batchSize` defines the number of plaintext chunks processed by the automated parameter configuration in a batch. 
-- `keygenDistribution` defines the probabilistic distribution, based on which TED chooses the key seed; specifically, if `keygenDistribution` = 0, TED deterministically derives the key seed; otherwise if `keygenDistribution` = 1, 2, 3 and 4, TED chooses the key seed based on the uniform, poisson, normal and geometric distributions, respectively.  
+- `batchSize` defines the number of plaintext chunks processed by the automated parameter configuration in a batch.
+- `keygenDistribution` defines the probabilistic distribution, based on which TED chooses the key seed; specifically, if `keygenDistribution` = 0, TED deterministically derives the key seed; otherwise if `keygenDistribution` = 1, 2, 3 and 4, TED chooses the key seed based on the uniform, poisson, normal and geometric distributions, respectively.
 
 Then you can run a python script `./script/analyze.py` to show the frequency distributions of plaintext and ciphertext chunks in different dimensions. Generally, it presents:
 
@@ -129,7 +129,7 @@ Then you can run a python script `./script/analyze.py` to show the frequency dis
 - The total number of plaintext/ciphertext chunks before deduplication.
 - The storage saving rate, which is defined as (number of ciphertext chunks before deduplication - number of ciphertext chunk after deduplication)/(number of ciphertext chunks before deduplication).
 - The KLD (relative entropy); refer our paper for its definition.
-- The storage blowup rate, which is defined as (number of ciphertext chunks after deduplication - number of unique plaintext chunks)/(number of unique plaintext chunks).  
+- The storage blowup rate, which is defined as (number of ciphertext chunks after deduplication - number of unique plaintext chunks)/(number of unique plaintext chunks).
 
 ```shell
 python3 ./script/analyze.py [outFile].pfreq [outFile].cfreq
@@ -139,17 +139,17 @@ python3 ./script/analyze.py [outFile].pfreq [outFile].cfreq
 
 ---
 
-We now present an example to demonstrate the usage of TED. You first download the FSL trace from [FSL Traces and Snapshots Public Archive](http://tracer.filesystems.org/traces/fslhomes/) and generate the chunk fingerprint list using `hf-stat` (that is a component of the [fs-hasher](http://tracer.filesystems.org/fs-hasher-0.9.5.tar.gz) toolkit, see fs-hasher documentation for how to use it). For example, if we focus on the snapshot (that has an average chunk size of 8KB) from user004 in 2013-01-22, you can run:  
+We now present an example to demonstrate the usage of TED. You first download the FSL trace from [FSL Traces and Snapshots Public Archive](http://tracer.filesystems.org/traces/fslhomes/) and generate the chunk fingerprint list using `hf-stat` (that is a component of the [fs-hasher](http://tracer.filesystems.org/fs-hasher-0.9.5.tar.gz) toolkit, see fs-hasher documentation for how to use it). For example, if we focus on the snapshot (that has an average chunk size of 8KB) from user004 in 2013-01-22, you can run:
 
 ```shell
-# note that you need to remove the title line of hf-stat output, in order to be compatiable with TED    
-./hf-stat -h fslhomes-user004-2013-01-22.8kb.hash.anon |  sed --expression='1d' > fslhomes-user004-2013-01-22 
+# note that you need to remove the title line of hf-stat output, in order to be compatiable with TED
+./hf-stat -h fslhomes-user004-2013-01-22.8kb.hash.anon |  sed --expression='1d' > fslhomes-user004-2013-01-22
 
-# fTED is used with a batch size of 3000, a storage blowup factor of 1.05 and uniform distribution for key generation 
+# fTED is used with a batch size of 3000, a storage blowup factor of 1.05 and uniform distribution for key generation
 ./bin/TEDSim fslhomes-user004-2013-01-22 out fted 3000 1.05 1
 ```
 
-In addition to `out.pfreq` and `out.cfreq`, it prints the following basic statistical information. 
+In addition to `out.pfreq` and `out.cfreq`, it prints the following basic statistical information.
 
 ```shell
 ============== Original Backup =============
@@ -199,20 +199,20 @@ The amount of unique ciphertext chunks: 769990
 Total Logical Ciphertext Chunks: 1069738
 ```
 
-This implies that, in the example, fTED 
+This implies that, in the example, fTED
  reduces the KLD from 0.844787 to 0.227477, while the actual storage blowup rate is around 1.04 which is close to the pre-configured storage blowup factor of 1.05.
 
 
 ## TEDStore
 
-TEDStore implements an encrypted deduplication prototype based TED. 
+TEDStore implements an encrypted deduplication prototype based TED.
 
 
 To use TEDStore, switch your current working directory to `TEDStore/`.
 
 ### Build
 
-Compile TEDStore as follows. 
+Compile TEDStore as follows.
 
 ```shell
 mkdir -p bin && mkdir -p build && cd build
@@ -225,7 +225,7 @@ cp -r key/ bin/
 mkdir -p bin/Containers && mkdir -p bin/Recipes
 ```
 
-Alternatively, we provide a script for quick build, and you can use it. 
+Alternatively, we provide a script for quick build, and you can use it.
 ```shell
 chmod +x ./ShellScripts/systemBuild.sh
 chmod +x ./ShellScripts/systemCleanup.sh
@@ -264,7 +264,7 @@ configuration (`./bin/config.json`) of TEDStore as follows.
         "_fp2MetaDBame": "db2" // Path to the file recipe database directory
     },
     "client": {
-        "_clientID": 1, // Current client ID 
+        "_clientID": 1, // Current client ID
         "_sendChunkBatchSize": 1000, // Maximum number of chunks sent per communication
         "_sendRecipeBatchSize": 100000, // Maximum number of file recipe entry sent per communication
         "_sendShortHashMaskBitNumber": 12 // Bit length modified during key generation (To prevent this information from being obtained by Key server)
@@ -274,7 +274,7 @@ configuration (`./bin/config.json`) of TEDStore as follows.
 
 ### Usage
 
-You can test TEDStore in a single machine, and connect the key manager, server (e.g., the provider in the paper) and client instances via the local loopback interface. To this end, switch your current working directory to `bin/`, and start each instance in an independent terminal:   
+You can test TEDStore in a single machine, and connect the key manager, server (e.g., the provider in the paper) and client instances via the local loopback interface. To this end, switch your current working directory to `bin/`, and start each instance in an independent terminal:
 
 ```shell
 ./keymanager
@@ -283,7 +283,7 @@ You can test TEDStore in a single machine, and connect the key manager, server (
 ./server
 ```
 
-TEDStore provides store and restore interfaces to client. 
+TEDStore provides store and restore interfaces to client.
 ```shell
 # store file
 ./client -s file
@@ -294,12 +294,13 @@ TEDStore provides store and restore interfaces to client.
 
 ## Limitations
 
-* TED works on the fingerprints of chunks (rather than exact chunk data). This may raise a few deviations on TED results, compared with working on actual data.   
+* TED works on the fingerprints of chunks (rather than exact chunk data). This may raise a few deviations on TED results, compared with working on actual data.
 * TEDStore does not apply any optimizations to file restore. Its restore performance may be affected by the number of stored files.
 
 ## Downloads
 
-[![](https://img.shields.io/badge/ted-version 1.0-blue.svg)](https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EeUpm9cA19RNo6ZeGJSiDlMBdYFVUVO3GyWudE6_BLE1Kg?e=aM62gu)
+[![](https://img.shields.io/badge/ted-version 1.0-blue.svg)](https://www.icloud.com.cn/iclouddrive/0edZTkfE4DYDfTvBdgLGpJsSg#ted-1)
+
 
 ## Maintainers
 

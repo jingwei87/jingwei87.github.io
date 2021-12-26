@@ -237,7 +237,7 @@
 
 <ul>
   <li>
-    <p>Jingwei Li, Chuan Qin, Patrick P. C. Lee, and Jin Li. 
+    <p>Jingwei Li, Chuan Qin, Patrick P. C. Lee, and Jin Li.
 <strong>Rekeying for Encrypted Deduplication Storage.</strong>
 Proceedings of the 46th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2016) (Regular paper), Toulouse, France, June 2016.</p>
   </li>
@@ -276,7 +276,7 @@ ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
 </code></pre></div></div>
 
 <p>Then, compile our provided GMP source to make install.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/gmp-6.1.2.tar <span class="o">&amp;&amp;</span> <span class="nb">cd </span>gmp-6.1.2/ 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/gmp-6.1.2.tar <span class="o">&amp;&amp;</span> <span class="nb">cd </span>gmp-6.1.2/
 <span class="nv">$ </span>./configure
 <span class="nv">$ </span>make
 <span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
@@ -290,7 +290,7 @@ ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
 </code></pre></div></div>
 
 <p>Then, compile our provided PBC source to make install.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/pbc-0.5.14.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>pbc-0.5.14/ 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/pbc-0.5.14.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>pbc-0.5.14/
 <span class="nv">$ </span>./configure
 <span class="nv">$ </span>make
 <span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
@@ -302,7 +302,7 @@ ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
 </code></pre></div></div>
 
 <p>Then, compile our provided libbswabe source to make install.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/libbswabe-0.9.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>libbswabe-0.9/ 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/libbswabe-0.9.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>libbswabe-0.9/
 <span class="nv">$ </span>./configure
 <span class="nv">$ </span>make
 <span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
@@ -310,7 +310,7 @@ ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
 </code></pre></div></div>
 
 <p><strong>Step 5:</strong> Configure the cpabe package for installation.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/cpabe-0.11.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>cpabe-0.11/ 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-xvf</span> dependency/cpabe-0.11.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd </span>cpabe-0.11/
 <span class="nv">$ </span>./configure
 </code></pre></div></div>
 
@@ -387,16 +387,16 @@ ACM Transactions on Storage (TOS), 13(1), 9:1-9:30, March 2017.</p>
 
 <p>After configuring all entities, we can use REED client for typical commands:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># keygen </span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># keygen</span>
 <span class="nv">$ </span>./CLIENT <span class="nt">-k</span> <span class="o">[</span>attribute] <span class="o">[</span>private key filename]
-	
-<span class="c"># upload file </span>
+
+<span class="c"># upload file</span>
 <span class="nv">$ </span>./CLIENT <span class="nt">-u</span> <span class="o">[</span>filename] <span class="o">[</span>policy] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
-    
-<span class="c"># download file </span>
+
+<span class="c"># download file</span>
 <span class="nv">$ </span>./CLIENT <span class="nt">-d</span> <span class="o">[</span>filename] <span class="o">[</span>private key filename] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
-	
-<span class="c"># rekeying file </span>
+
+<span class="c"># rekeying file</span>
 <span class="nv">$ </span>./CLIENT <span class="nt">-r</span> <span class="o">[</span>filename] <span class="o">[</span>private key filename] <span class="o">[</span>new policy] <span class="o">[</span>secutiy <span class="nb">type</span><span class="o">]</span>
 
 <span class="c"># parameters</span>
@@ -481,9 +481,9 @@ cannot decrypt, attributes <span class="k">in </span>key <span class="k">do </sp
 
 <h2 id="downloads">Downloads</h2>
 
-<p><a href="https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EdNOTuKVMYRDnWiG_k-Ms9YBo1uOI_j9DqOigyPG3Cr4vw?e=f0xclk"><img src="https://img.shields.io/badge/reed-version
-    1.1-blue.svg" alt="" /></a> 
-<a href="https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EU1a3flAMQBBru4Kd8BEHR0Bk1I-HtleJEc6By_6HzY_gQ?e=5RiCmz"><img src="https://img.shields.io/badge/reed-version
+<p><a href="https://www.icloud.com.cn/iclouddrive/0b1DDnSUUAb8__gZHbhAQ1SAw#reed-1"><img src="https://img.shields.io/badge/reed-version
+    1.1-blue.svg" alt="" /></a>
+<a href="https://www.icloud.com.cn/iclouddrive/048KBe7OJljNZWJ-NxMiCGU5g#reed-1"><img src="https://img.shields.io/badge/reed-version
     1.0-blue.svg" alt="" /></a></p>
 
 <p>Change Log:</p>
@@ -524,7 +524,6 @@ cannot decrypt, attributes <span class="k">in </span>key <span class="k">do </sp
     </ul>
   </li>
 </ul>
-
 
         
       </section>
