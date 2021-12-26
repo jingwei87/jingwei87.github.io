@@ -241,7 +241,7 @@ efficiency and data confidentiality, with small performance overhead.</p>
 
 <p>We test TED and TEDStore under Ubuntu 18.04 and 16.04 (note that to run TEDStore, your machine needs to have at least 4GB memory). They require OpenSSL (<a href="https://www.openssl.org/source/openssl-1.1.1d.tar.gz">version 1.1.1d</a>), Leveldb (<a href="https://github.com/google/leveldb/archive/1.22.tar.gz">version 1.22</a>), Boost C++ library, and Snappy. Our test compiles TED and TEDStore using CMake 3.17 and GNU GCC 7.4.0.</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>libboost-all-dev libsnappy-dev 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>libboost-all-dev libsnappy-dev
 
 <span class="c"># openssl</span>
 wget <span class="nt">-O</span> - https://www.openssl.org/source/openssl-1.1.1d.tar.gz | <span class="nb">tar</span> <span class="nt">-xz</span>
@@ -250,9 +250,9 @@ wget <span class="nt">-O</span> - https://www.openssl.org/source/openssl-1.1.1d.
 <span class="nb">cd</span> ..
 
 <span class="c"># leveldb</span>
-wget <span class="nt">-O</span> - https://github.com/google/leveldb/archive/1.22.tar.gz | <span class="nb">tar</span> <span class="nt">-xz</span> 
-<span class="nb">mkdir</span> <span class="nt">-p</span> ./leveldb-1.22/build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="s2">"</span><span class="nv">$_</span><span class="s2">"</span> 
-cmake <span class="nt">-DCMAKE_BUILD_TYPE</span><span class="o">=</span>Release .. <span class="o">&amp;&amp;</span> cmake <span class="nt">--build</span> <span class="nb">.</span> 
+wget <span class="nt">-O</span> - https://github.com/google/leveldb/archive/1.22.tar.gz | <span class="nb">tar</span> <span class="nt">-xz</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> ./leveldb-1.22/build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="s2">"</span><span class="nv">$_</span><span class="s2">"</span>
+cmake <span class="nt">-DCMAKE_BUILD_TYPE</span><span class="o">=</span>Release .. <span class="o">&amp;&amp;</span> cmake <span class="nt">--build</span> <span class="nb">.</span>
 <span class="nb">cd</span> ../../
 
 <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">PATH_TO_TED</span><span class="k">}</span>/lib/
@@ -346,10 +346,10 @@ cmake <span class="nt">-DCMAKE_BUILD_TYPE</span><span class="o">=</span>Release 
 
 <p>We now present an example to demonstrate the usage of TED. You first download the FSL trace from <a href="http://tracer.filesystems.org/traces/fslhomes/">FSL Traces and Snapshots Public Archive</a> and generate the chunk fingerprint list using <code class="highlighter-rouge">hf-stat</code> (that is a component of the <a href="http://tracer.filesystems.org/fs-hasher-0.9.5.tar.gz">fs-hasher</a> toolkit, see fs-hasher documentation for how to use it). For example, if we focus on the snapshot (that has an average chunk size of 8KB) from user004 in 2013-01-22, you can run:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># note that you need to remove the title line of hf-stat output, in order to be compatiable with TED    </span>
-./hf-stat <span class="nt">-h</span> fslhomes-user004-2013-01-22.8kb.hash.anon |  <span class="nb">sed</span> <span class="nt">--expression</span><span class="o">=</span><span class="s1">'1d'</span> <span class="o">&gt;</span> fslhomes-user004-2013-01-22 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># note that you need to remove the title line of hf-stat output, in order to be compatiable with TED</span>
+./hf-stat <span class="nt">-h</span> fslhomes-user004-2013-01-22.8kb.hash.anon |  <span class="nb">sed</span> <span class="nt">--expression</span><span class="o">=</span><span class="s1">'1d'</span> <span class="o">&gt;</span> fslhomes-user004-2013-01-22
 
-<span class="c"># fTED is used with a batch size of 3000, a storage blowup factor of 1.05 and uniform distribution for key generation </span>
+<span class="c"># fTED is used with a batch size of 3000, a storage blowup factor of 1.05 and uniform distribution for key generation</span>
 ./bin/TEDSim fslhomes-user004-2013-01-22 out fted 3000 1.05 1
 </code></pre></div></div>
 
@@ -401,7 +401,7 @@ The amount of unique ciphertext chunks: 769990
 Total Logical Ciphertext Chunks: 1069738
 </code></pre></div></div>
 
-<p>This implies that, in the example, fTED 
+<p>This implies that, in the example, fTED
  reduces the KLD from 0.844787 to 0.227477, while the actual storage blowup rate is around 1.04 which is close to the pre-configured storage blowup factor of 1.05.</p>
 
 <h2 id="tedstore">TEDStore</h2>
@@ -461,7 +461,7 @@ configuration (<code class="highlighter-rouge">./bin/config.json</code>) of TEDS
         "_fp2MetaDBame": "db2" // Path to the file recipe database directory
     },
     "client": {
-        "_clientID": 1, // Current client ID 
+        "_clientID": 1, // Current client ID
         "_sendChunkBatchSize": 1000, // Maximum number of chunks sent per communication
         "_sendRecipeBatchSize": 100000, // Maximum number of file recipe entry sent per communication
         "_sendShortHashMaskBitNumber": 12 // Bit length modified during key generation (To prevent this information from being obtained by Key server)
@@ -495,7 +495,7 @@ configuration (<code class="highlighter-rouge">./bin/config.json</code>) of TEDS
 
 <h2 id="downloads">Downloads</h2>
 
-<p><a href="https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EeUpm9cA19RNo6ZeGJSiDlMBdYFVUVO3GyWudE6_BLE1Kg?e=aM62gu"><img src="https://img.shields.io/badge/ted-version 1.0-blue.svg" alt="" /></a></p>
+<p><a href="https://www.icloud.com.cn/iclouddrive/0edZTkfE4DYDfTvBdgLGpJsSg#ted-1"><img src="https://img.shields.io/badge/ted-version 1.0-blue.svg" alt="" /></a></p>
 
 <h2 id="maintainers">Maintainers</h2>
 

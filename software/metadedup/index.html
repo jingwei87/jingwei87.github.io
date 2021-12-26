@@ -238,7 +238,7 @@
 </ul>
 
 <p>To install OpenSSL, Boost C++ library, GF-complete and snappy (that is necessary for Leveldb), type the following command:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libboost-all-dev libsnappy-dev libssl-dev libgf-complete-dev 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>libboost-all-dev libsnappy-dev libssl-dev libgf-complete-dev
 </code></pre></div></div>
 <p>Leveldb is packed in <code class="highlighter-rouge">server/lib/</code>, and compile it using the following command:</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nt">-C</span> server/lib/leveldb/
@@ -267,9 +267,9 @@
 <p>Edit the configuration file <code class="highlighter-rouge">client/config-u</code> to set server information for upload. Note that the configuration should be consistent with the IPs and ports of the n running servers.</p>
 
 <p>An example of <code class="highlighter-rouge">client/config-u</code> is shown as follows:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0.0.0:11030 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0.0.0:11030
 0.0.0.0:11031
-0.0.0.0:11032 
+0.0.0.0:11032
 0.0.0.0:11033
 0.0.0.0:11034
 0.0.0.0:11035
@@ -292,7 +292,7 @@
 <h4 id="changing-n-k">Changing (n, k)</h4>
 
 <p>You can modify the variables <code class="highlighter-rouge">n_</code> and <code class="highlighter-rouge">m_</code> in lines 47-50 in <code class="highlighter-rouge">client/utils/conf.hh</code>, in order to change the parameter setting (n, k) of Metadedup.</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// default (n, k) configuration of Metadedup </span>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// default (n, k) configuration of Metadedup</span>
 <span class="n">n_</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 <span class="n">m_</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="n">k_</span> <span class="o">=</span> <span class="n">n_</span> <span class="o">-</span> <span class="n">m_</span><span class="p">;</span>
@@ -375,9 +375,9 @@
 
 <h2 id="downloads">Downloads</h2>
 
-<p><a href="https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/Eaqe8EXCrh1EiMo5BSzXKsgBKL2azteeK53M2axm5YhHrA?e=GT2aEp"><img src="https://img.shields.io/badge/metadedup-version
+<p><a href="https://www.icloud.com.cn/iclouddrive/0ea6_shdR96XdlyAFce68WdAQ#metadedup-1"><img src="https://img.shields.io/badge/metadedup-version
     1.1-blue.svg" alt="" /></a>
-<a href="https://uestccs-my.sharepoint.com/:u:/g/personal/jwli_uestccs_onmicrosoft_com/EZ7tFaKgCkBAkQf7HMeogwMBLrCdjtlm4mncWWyQEXQmdw?e=FhiYKf"><img src="https://img.shields.io/badge/metadedup-version
+<a href="https://www.icloud.com.cn/iclouddrive/0346EuJIOtBh0N_Ec6rAvCVfA#metadedup-1"><img src="https://img.shields.io/badge/metadedup-version
     1.0-blue.svg" alt="" /></a></p>
 
 <p>Change Log:</p>
