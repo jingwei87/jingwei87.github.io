@@ -10,6 +10,7 @@ permalink: /activity/index.html
 
 ## Program Committees
 
+- International Conference on Parallel Processing (ICPP: 2022)
 - International Symposium on Security and Privacy in Social Networks and Big Data (SocialSec: 2022)
 - International Symposium on Cyberspace Safety and Security (CSS: 2022)
 - Global Communications Conference (GlobeCom: 2021)

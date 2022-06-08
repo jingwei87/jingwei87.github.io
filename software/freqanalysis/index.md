@@ -25,7 +25,7 @@ We study how frequency analysis practically affects information leakage in encry
 
 The toolkit includes the attack and defense implementations against the [FSL dataset](http://tracer.filesystems.org), as well as a deduplication storage prototype based on an existing realistic deduplication system of data domain file system (DDFS) to study the metadata access overhead of defense schemes.
 
-### Publication
+### Publications
 
 - Jingwei Li, Guoli Wei, Jiacheng LIANG, Yanjing Ren, Patrick P. C. Lee, Xiaosong Zhang. Revisiting Frequency Analysis against Encrypted Deduplication via Statistical Distribution. In Proc. of IEEE INFOCOM, 2022.
 - Jingwei Li, Patrick P. C. Lee, Chufeng Tan, Chuan Qin, and Xiaosong Zhang. Information Leakage in Encrypted Deduplication via Frequency Analysis: Attacks and Defenses. ACM Transactions on Storage (TOS), 16(1), pp. 4:1-4:30, 2020.

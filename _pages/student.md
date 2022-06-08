@@ -10,21 +10,27 @@ permalink: /student/index.html
 
 
 ## Graduate Students
-- **Ren, Yanjing**, Master, Sep 2019-now
-  - Publications: INFOCOM 2022 (4th author), ATC 2021 (1st author), TC 2021 (3rd author), Eurosys 2020 (3rd author)
-
-- **Huang, Suyu**, Master, Sep 2019-now
-  - Publications: TC 2021 (2nd author)
-
 - **Tang, Xingpeng**, Master, Sep 2020-now
 
 - **Xia, Wenniu**, Master, Sep 2020-now
 
 - **Xiao, Hengying**, Master, Sep 2021-now
 
+- **Wu, Ruilin**, Master, Sep 2022-now
+
 ---
 
 ## Alumni
+
+### Graduate Students
+
+- **Ren, Yanjing**, Master, Sep 2019-Jun 2022
+  - Publications: INFOCOM 2022 (4th author), ATC 2021 (1st author), TC 2021 (3rd author), Eurosys 2020 (3rd author)
+  - First employment: PhD student in The Chinese University of Hong Kong
+
+- **Huang, Suyu**, Master, Sep 2019-Jun 2022
+  - Publications: TC 2021 (2nd author)
+  - First employment: 蚂蚁金服
 
 ### Selective Undergraduate Students
 
@@ -34,13 +40,13 @@ permalink: /student/index.html
 
 - **Liang, Jiacheng**, Dec 2019-Sep 2021
   - Publication: INFOCOM 2022 (3rd author)
+  - First employment: PhD student in Pennsylvania State University 
 
 - **Wei, Yake**, Nov 2018-Sep 2020
 	- Publication: ITME 2019 (2nd author)
   - First employment: Phd student in 中国人民大学
 
 - **Ren, Yanjing**, Sep 2017-Sep 2019
-	- Awards: Interdisciplinary Contest In Modeling (Meritorious Winner); 2017年高教杯全国大学生数学建模竞赛四川省一等奖; 2018年ASC世界大学生超级计算机竞赛二等奖
 	- Publication: MSST 2019 (3rd author)
 	- First employment: Master student in 电子科技大学
 
@@ -49,5 +55,4 @@ permalink: /student/index.html
 	- First employment: Master student in 电子科技大学
 
 - **Wei, Siqian**, Jun 2018-Mar 2019
-  - Internship: 今日头条
   - First employment: 今日头条

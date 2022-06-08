@@ -25,7 +25,7 @@ encrypted deduplication prototype TEDStore to realize TED in networked environme
 real-world file system snapshots shows that TED effectively balances the trade-off between storage
 efficiency and data confidentiality, with small performance overhead.
 
-## Publications
+### Publications
 
 * Zuoru Yang, Jingwei Li, Yanjing Ren, and Patrick P. C. Lee.
 **Tunable Encrypted Deduplication with Attack-Resilient Key Management.**

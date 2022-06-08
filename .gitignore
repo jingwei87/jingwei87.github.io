@@ -6,3 +6,5 @@ vendor/
 .#publish.sh
 _bibliography/auto/
 _site/publish.sh
+.projectile
+.auctex-auto

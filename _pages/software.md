@@ -8,7 +8,7 @@ permalink: /software/
 SGXDedup is an SGX-based encrypted deduplication system, which leverages Intel SGX to speed up encrypted deduplication based on server-aided message-locked encryption (MLE) while preserving security via SGX. It implements a suite of secure interfaces to execute MLE key generation and proof-of-ownership operations in SGX enclaves. It also proposes various designs to support secure and efficient enclave operations.
 
 
-### [TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication](ted/index.html) *(Eurosys'20)*
+### [TED: Balancing Storage Efficiency and Data Confidentiality with Tunable Encrypted Deduplication](ted/index.html) *(Eurosys'20, TOS'22)*
 TED is a tunable encrypted deduplication approach for balancing the trade-off between data confidentiality and storage efficiency. It allows users to configure a storage blowup factor, under which the information leakage quantified by an information-theoretic measure is minimized for any input workload.
 
 ### [Metadedup: Deduplicating Metadata in Encrypted Deduplication via Indirection](metadedup/index.html) *(MSST'19, TC'22)*
@@ -24,5 +24,5 @@ The toolkit demonstrates the practical implication of frequency analysis against
 REED is an encrypted deduplication storage system with rekeying enabled. It builds on a deterministic version of all-or-nothing transform (AONT) for secure and lightweight rekeying, while preserving the deduplication capability. It also exploits similarity to mitigate key generation overhead.
 
 
-### [CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal](cdstore/index.html) *(IC'16)*
+### [CDStore: Toward Reliable, Secure, and Cost-Efficient Cloud Storage via Convergent Dispersal](cdstore/index.html) *(ATC'15, IC'16)*
 CDStore builds on an augmented secret sharing scheme called convergent dispersal, which supports deduplication by using deterministic content-derived hashes as inputs to secret sharing. It combines convergent dispersal with two-stage deduplication to achieve both bandwidth and storage savings and be robust against side-channel attacks.
