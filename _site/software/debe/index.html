@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Project  Jingwei’s Homepage</title>
+<!-- begin _includes/seo.html --><title>Jingwei's Homepage</title>
 <meta name="description" content="This is Dr. Jingwei Li’s homepage.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Jingwei's Homepage">
-<meta property="og:title" content="Project">
-<meta property="og:url" content="https://jingwei87.github.io/project/">
+<meta property="og:title" content="Jingwei’s Homepage">
+<meta property="og:url" content="https://jingwei87.github.io/software/debe/">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="https://jingwei87.github.io/project/">
+<link rel="canonical" href="https://jingwei87.github.io/software/debe/">
 
 
 
@@ -87,7 +87,7 @@
 
   </head>
 
-  <body class="layout--splash">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -145,49 +145,107 @@
     <div class="initial-content">
       
 
+
+
 <div id="main" role="main">
-  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Project">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/software/debe/overview.jpg"
+        
+        alt="">
+      
+      <h3>DEBE</h3>
+      <p>DEBE builds on frequency-based deduplication that first removes duplicates of frequent data in a space-constrained SGX enclave and then removes all remaining duplicates outside the enclave.</p>
+
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
     
     
     
 
-    <section class="page__content" itemprop="text">
-      <h2 id="encrypted-deduplication-current-focus">Encrypted Deduplication (Current Focus)</h2>
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
 
-<p>Encrypted deduplication seamlessly combines encryption and deduplication to simultaneously achieve
-both data security and storage efficiency. It builds on the idea that encrypts each message
-with a key derived from the content of the message itself, so that identical messages are
-always encrypted into identical ciphertexts for deduplication.</p>
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#publications">Publications</a></li>
+  <li><a href="#downloads">Downloads</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="debe-secure-and-lightweight-deduplicated-storage-via-shielded-deduplication-before-encryption">DEBE: Secure and Lightweight Deduplicated Storage via Shielded Deduplication-Before-Encryption</h1>
 
-<p>In this project, we address the practical issues of  encrypted deduplication, in order
-to improve its usability in real systems.</p>
+<h2 id="introduction">Introduction</h2>
+
+<p>DEBE is a shielded DbE-based deduplicated storage system that protects deduplication via Intel SGX. DEBE builds on frequency-based deduplication that first removes duplicates of frequent data in a space-constrained SGX enclave and then removes all remaining duplicates outside the enclave.</p>
+
+<h2 id="publications">Publications</h2>
 
 <ul>
-  <li><a href="/software/debe/index.html">DEBE</a> realizes deduplication-before-encryption via SGX (ATC’22)</li>
-  <li><a href="/software/sgxdedup/index.html">SGXDedup</a> implements a high performance encrypted deduplication system via SGX (ATC’21).</li>
-  <li><a href="/software/ted/index.html">TED</a> proposes a tunable encrypted deduplication approach to balance data confidentiality and storage efficiency (Eurosys’20).</li>
-  <li><a href="/software/metadedup/index.html">Metadedup</a> presents encrypted deduplication storage with space-efficient metadata management (MSST’19, TC’21).</li>
-  <li><a href="/software/freqanalysis/index.html">Freqanalysis toolkit</a> reveals the underlying security risk against encrypted deduplication (DSN’17, TOS’20, INFOCOM’22).</li>
-  <li><a href="/software/reed/index.html">REED</a> augments encrypted deduplication storage systems with dynamic access control (DSN’16, TOS’17).</li>
-  <li><a href="/software/cdstore/index.html">CDStore</a> provides a unified multi-cloud storage solution with reliability, security and cost efficiency (ATC’15, IC’16).</li>
-  <li><a href="http://doi.org/10.1109/TPDS.2013.284">Dekey</a> provides a cost-efficient way for managing large-scale convergent keys (TPDS’14).</li>
+  <li>Zuoru Yang, Jingwei Li, and Patrick P. C. Lee.
+  <strong>Secure and Lightweight Deduplicated Storage via Shielded Deduplication-Before-Encryption.</strong>
+  Proceedings of USENIX Annual Technical Conference (ATC 2022), July 2022.</li>
 </ul>
 
-<hr />
+<h2 id="downloads">Downloads</h2>
 
-<h2 id="outsourced-attribute-based-cryptographic-primitives">Outsourced Attribute-based Cryptographic Primitives</h2>
+<p>Please refer the <a href="https://github.com/yzr95924/DEBE">Github site</a> for source code and README.</p>
 
-<p>In this project, we introduce outsourced computation into attribute-based primitives and enable to securely delegate the heavy computations from resource-constrained clients to third-party servers:</p>
+<p>Change Log:</p>
 
 <ul>
-  <li>We propose various outsourced attribute-based encryption (ABE) primitives that can delegate the computation of <a href="/publication/jcs15.pdf">key generation</a> and <a href="/publication/icics12.pdf">encryption</a> to third party.</li>
-  <li>We augment outsourced decryption with <a href="/publication/tpds14check.pdf">checkability</a> that can verify the correctness of results.</li>
-  <li>We apply outsourcing computation to attribute-based signature and identity-based encryption, and delegate the <a href="http://doi.org/10.1109/TPDS.2013.2295809">sign</a> and <a href="/publication/tc15revoke.pdf">revocation</a> operation to third party, respectively.</li>
+  <li>Version 1.0.0 (Jun 2022)
+    <ul>
+      <li>First release</li>
+    </ul>
+  </li>
 </ul>
 
-    </section>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
   </article>
+
+  
+  
 </div>
     </div>
 

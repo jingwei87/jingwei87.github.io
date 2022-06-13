@@ -4,6 +4,9 @@ title: Software
 permalink: /software/
 ---
 
+### [DEBE: Secure and Lightweight Deduplicated Storage via Shielded Deduplication-Before-Encryption](debe/index.html) *(ATC'22)*
+DEBE is a shielded DbE-based deduplicated storage system that protects deduplication via Intel SGX. DEBE builds on frequency-based deduplication that first removes duplicates of frequent data in a space-constrained SGX enclave and then removes all remaining duplicates outside the enclave. 
+
 ### [SGXDedup: Accelerating Encrypted Deduplication via SGX](sgxdedup/index.html) *(ATC'21)*
 SGXDedup is an SGX-based encrypted deduplication system, which leverages Intel SGX to speed up encrypted deduplication based on server-aided message-locked encryption (MLE) while preserving security via SGX. It implements a suite of secure interfaces to execute MLE key generation and proof-of-ownership operations in SGX enclaves. It also proposes various designs to support secure and efficient enclave operations.
 
