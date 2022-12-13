@@ -7,6 +7,8 @@ permalink: /activity/index.html
 ## Journal Editors
 
 - Review Editor, Frontiers in Big Data (Cybersecurity and Privacy), April 2018 - present.
+- Guest Editor, Applied Sciences: Special Issue on Secure Cloud Storage, March, 2023.
+
 
 ## Program Committees
 

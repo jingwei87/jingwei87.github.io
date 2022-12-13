@@ -5,18 +5,19 @@ permalink: /student/index.html
 ---
 
 ## Undergraduate Students
-
-- **Zhang, Ran**, Sep 2021-now
-
+- **Zou, Fang**, Apr 2022-now
 
 ## Graduate Students
 - **Tang, Xingpeng**, Master, Sep 2020-now
+  - Publication: FCS 2022 (1st author)
 
 - **Xia, Wenniu**, Master, Sep 2020-now
 
 - **Xiao, Hengying**, Master, Sep 2021-now
 
 - **Wu, Ruilin**, Master, Sep 2022-now
+
+- **Yang, Jinyuan**, Master, Sep 2022-now
 
 ---
 
@@ -33,6 +34,9 @@ permalink: /student/index.html
   - First employment: 蚂蚁金服
 
 ### Selective Undergraduate Students
+
+- **Zhang, Ran**, Sep 2021-Jun 2022
+  - First employment: Master student in 电子科技大学
 
 - **Wei, Guoli**, Sep 2019-Sep 2021
   - Publication: INFOCOM 2022 (2nd author)
