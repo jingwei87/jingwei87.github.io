@@ -4,6 +4,10 @@ title: Software
 permalink: /software/
 ---
 
+### [FeatureSpy: Detecting Learning-Content Attacks via Feature Inspection in Secure Deduplicated Storage](https://github.com/tinoryj/FeatureSpy) *(INFOCOM'23)*
+FeatureSpy is a secure deduplicated storage system that effectively detects learning-content attacks based on the observation that such attacks often generate a large volume of similar data.
+
+
 ### [DEBE: Secure and Lightweight Deduplicated Storage via Shielded Deduplication-Before-Encryption](debe/index.html) *(ATC'22)*
 DEBE is a shielded DbE-based deduplicated storage system that protects deduplication via Intel SGX. DEBE builds on frequency-based deduplication that first removes duplicates of frequent data in a space-constrained SGX enclave and then removes all remaining duplicates outside the enclave. 
 

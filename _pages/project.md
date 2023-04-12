@@ -14,7 +14,8 @@ always encrypted into identical ciphertexts for deduplication.
 In this project, we address the practical issues of  encrypted deduplication, in order
 to improve its usability in real systems.
 
-- [DEBE](/software/debe/index.html) realizes deduplication-before-encryption via SGX (ATC'22)
+- [FeatureSpy](https://github.com/tinoryj/FeatureSpy) is a secure deduplicated storage system that effectively detects learning-content attacks based on the observation that such attacks often generate a large volume of similar data (INFOCOM'23).
+- [DEBE](/software/debe/index.html) realizes deduplication-before-encryption via SGX (ATC'22).
 - [SGXDedup](/software/sgxdedup/index.html) implements a high performance encrypted deduplication system via SGX (ATC'21).
 - [TED](/software/ted/index.html) proposes a tunable encrypted deduplication approach to balance data confidentiality and storage efficiency (Eurosys'20).
 - [Metadedup](/software/metadedup/index.html) presents encrypted deduplication storage with space-efficient metadata management (MSST'19, TC'21).

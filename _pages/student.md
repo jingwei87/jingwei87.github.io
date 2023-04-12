@@ -19,6 +19,10 @@ permalink: /student/index.html
 
 - **Yang, Jinyuan**, Master, Sep 2022-now
 
+- **Wu, Jun**, Master, Sep 2023-now
+
+- **Li, Junhao**, Master, Sep 2023-now
+
 ---
 
 ## Alumni
