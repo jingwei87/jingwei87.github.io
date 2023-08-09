@@ -8,11 +8,6 @@ permalink: /student/index.html
 - **Zou, Fang**, Apr 2022-now
 
 ## Graduate Students
-- **Tang, Xingpeng**, Master, Sep 2020-now
-  - Publication: FCS 2022 (1st author)
-
-- **Xia, Wenniu**, Master, Sep 2020-now
-
 - **Xiao, Hengying**, Master, Sep 2021-now
 
 - **Wu, Ruilin**, Master, Sep 2022-now
@@ -21,7 +16,7 @@ permalink: /student/index.html
 
 - **Wu, Jun**, Master, Sep 2023-now
 
-- **Li, Junhao**, Master, Sep 2023-now
+- **Zhang, Jia**, Master, Sep 2023-now
 
 ---
 
@@ -36,6 +31,13 @@ permalink: /student/index.html
 - **Huang, Suyu**, Master, Sep 2019-Jun 2022
   - Publications: TC 2021 (2nd author)
   - First employment: 蚂蚁金服
+
+- **Xia, Wenniu**, Master, Sep 2020-Jun 2023
+  - First employment: 南通市公务员
+
+- **Tang, Xingpeng**, Master, Sep 2020-now
+  - Publication: FCS 2022 (1st author)
+  - First employment: TP-Link  
 
 ### Selective Undergraduate Students
 
