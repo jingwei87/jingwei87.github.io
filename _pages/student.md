@@ -7,6 +7,8 @@ permalink: /student/index.html
 ## Undergraduate Students
 - **Zou, Fang**, Apr 2022-now
 
+- **Zhou, Yanlin**, Oct 2023-now
+
 ## Graduate Students
 - **Xiao, Hengying**, Master, Sep 2021-now
 
@@ -17,6 +19,8 @@ permalink: /student/index.html
 - **Wu, Jun**, Master, Sep 2023-now
 
 - **Zhang, Jia**, Master, Sep 2023-now
+
+- **Zhang, Lizhi**, Master, Dec 2023-now
 
 ---
 

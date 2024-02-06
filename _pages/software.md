@@ -4,6 +4,9 @@ title: Software
 permalink: /software/
 ---
 
+### [ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage](https://github.com/adslabcuhk/elect) *(FAST'24)*
+ELECT is a distributed tiered KV store that enables replication and erasure coding tiering.
+
 ### [FeatureSpy: Detecting Learning-Content Attacks via Feature Inspection in Secure Deduplicated Storage](https://github.com/tinoryj/FeatureSpy) *(INFOCOM'23)*
 FeatureSpy is a secure deduplicated storage system that effectively detects learning-content attacks based on the observation that such attacks often generate a large volume of similar data.
 

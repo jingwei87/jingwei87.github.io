@@ -7,6 +7,9 @@ permalink: /publication/index.html
 [[**List by Year**](index.html)]
 [[**List by Type**](index-type.html)]
 
+## 2024
+{% bibliography -q @*[year=2024] %}
+
 ## 2023
 {% bibliography -q @*[year=2023] %}
 
