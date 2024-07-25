@@ -4,6 +4,12 @@ title: Software
 permalink: /software/
 ---
 
+### [EDRStore: Removing Redundancy from Encrypted Data in Outsourced Storage](https://github.com/adslabcuhk/edrstore) *(TOS'24)*
+EDRStore is an outsourced storage system that supports deduplication, delta compression, and local compression for storage savings, and further combines them with encryption for data confidentiality.
+
+### [CDCache: Space-Efficient Flash Caching via Compression-before-Deduplication](https://github.com/xiaohengying/CDCache) *(INFOCOM'24)*
+CDCache is a space-efficient flash caching system that implements compression-before-deduplication.
+
 ### [ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage](https://github.com/adslabcuhk/elect) *(FAST'24)*
 ELECT is a distributed tiered KV store that enables replication and erasure coding tiering.
 

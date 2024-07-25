@@ -5,28 +5,36 @@ permalink: /student/index.html
 ---
 
 ## Undergraduate Students
-- **Zou, Fang**, Apr 2022-now
 
-- **Zhou, Yanlin**, Oct 2023-now
+- **Zhang, Zeru**, Oct 2023-now
 
 ## Graduate Students
-- **Xiao, Hengying**, Master, Sep 2021-now
 
-- **Wu, Ruilin**, Master, Sep 2022-now
+- **Wu, Ruilin**, Sep 2022-now
 
-- **Yang, Jinyuan**, Master, Sep 2022-now
+- **Wu, Jun**, Sep 2023-now
 
-- **Wu, Jun**, Master, Sep 2023-now
+- **Zhang, Jia**, Sep 2023-now
 
-- **Zhang, Jia**, Master, Sep 2023-now
+- **Zhang, Lizhi**, Dec 2023-now
 
-- **Zhang, Lizhi**, Master, Dec 2023-now
+- **Wang, Ziyu**, Sep 2024-now
+
+- **Zou, Fang**, Sep 2024-now
+
+## PhD Students
+
+- **Yang, Jinyuan**, Sep 2022 (Master)-now  
 
 ---
 
 ## Alumni
 
 ### Graduate Students
+
+- **Xiao, Hengying**, Master, Sep 2021-Jun 2024
+  - Publications: INFOCOM 2024 (1st author)
+  - First employment: 华大九天
 
 - **Ren, Yanjing**, Master, Sep 2019-Jun 2022
   - Publications: INFOCOM 2022 (4th author), ATC 2021 (1st author), TC 2021 (3rd author), Eurosys 2020 (3rd author)
@@ -44,6 +52,9 @@ permalink: /student/index.html
   - First employment: TP-Link  
 
 ### Selective Undergraduate Students
+
+- **Zou, Fang**, Apr 2022-July 2024
+  - First employment: Master student in 电子科技大学
 
 - **Zhang, Ran**, Sep 2021-Jun 2022
   - First employment: Master student in 电子科技大学

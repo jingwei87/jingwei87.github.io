@@ -24,3 +24,5 @@ http://localhost:4444/.
 
 Note that I need to run `JEKYLL_ENV=production bundle exec jekyll build`, in order to generate a
 deployable site.  
+
+Sometimes, I face a problem that [my github webpage is not updating after changes are made](https://github.com/orgs/community/discussions/19713). I click unpublish site (in Setting/Pages), select the *none* branch for publishing and save. Then, I re-activate publishing, and choose the *master* branch. Wait for like a few minutes. It will be published again with all the changes. 
