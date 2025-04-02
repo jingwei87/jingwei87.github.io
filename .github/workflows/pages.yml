@@ -21,13 +21,18 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.1'
-        bundler-cache: true
+        bundler-cache: false
 
     - name: Configure Bundler
-      run: bundle config set --local frozen false
+      run: |
+        bundle config set --local deployment 'false'
+        bundle config set --local frozen 'false'
+        bundle config set --local path 'vendor/bundle'
 
     - name: Install dependencies
-      run: bundle install
+      run: |
+        rm -f Gemfile.lock
+        bundle install
 
     - name: Build site
       run: bundle exec jekyll build
