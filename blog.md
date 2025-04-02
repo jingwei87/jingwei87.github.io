@@ -46,8 +46,12 @@ order: 5
 .tags {
   margin-bottom: 2em;
 }
+.tags h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
 .tag-controls {
-  margin-top: 1em;
+  margin-top: 0.8em;
 }
 .tag-btn {
   display: inline-block;
@@ -58,6 +62,7 @@ order: 5
   background: #f8f9fa;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 0.9em;
 }
 .tag-btn.active {
   background: #007bff;
@@ -74,10 +79,25 @@ order: 5
   color: #dc3545;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 0.9em;
 }
 .clear-tags-btn:hover {
   background: #dc3545;
   color: white;
+}
+.post {
+  margin-bottom: 2em;
+}
+.post h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+}
+.post h2 a {
+  color: #333;
+  text-decoration: none;
+}
+.post h2 a:hover {
+  color: #007bff;
 }
 .post-meta {
   margin: 0.5em 0;
@@ -89,7 +109,7 @@ order: 5
   margin: 0 0.2em;
   background: #f0f0f0;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 .post.hidden {
   display: none;
