@@ -7,12 +7,15 @@ order: 5
 
 <div class="tags">
   <h2>Tags</h2>
-  {% assign tags = site.posts | map: "tags" | uniq | sort %}
-  {% for tag in tags %}
-    {% if tag != nil %}
-      <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
-    {% endif %}
-  {% endfor %}
+  <div class="tag-controls">
+    {% assign tags = site.posts | map: "tags" | uniq | sort %}
+    {% for tag in tags %}
+      {% if tag != nil %}
+        <button class="tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+      {% endif %}
+    {% endfor %}
+    <button class="clear-tags-btn">Clear All</button>
+  </div>
 </div>
 
 <div class="posts">
@@ -43,6 +46,9 @@ order: 5
 .tags {
   margin-bottom: 2em;
 }
+.tag-controls {
+  margin-top: 1em;
+}
 .tag-btn {
   display: inline-block;
   padding: 0.3em 0.8em;
@@ -51,11 +57,27 @@ order: 5
   border-radius: 3px;
   background: #f8f9fa;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 .tag-btn.active {
   background: #007bff;
   color: white;
   border-color: #0056b3;
+}
+.clear-tags-btn {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  margin: 0.2em;
+  border: 1px solid #dc3545;
+  border-radius: 3px;
+  background: #fff;
+  color: #dc3545;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.clear-tags-btn:hover {
+  background: #dc3545;
+  color: white;
 }
 .post-meta {
   margin: 0.5em 0;
@@ -77,33 +99,47 @@ order: 5
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const tagButtons = document.querySelectorAll('.tag-btn');
+  const clearButton = document.querySelector('.clear-tags-btn');
   const posts = document.querySelectorAll('.post');
-  let activeTag = null;
+  let activeTags = new Set();
+
+  function updatePosts() {
+    if (activeTags.size === 0) {
+      posts.forEach(post => post.classList.remove('hidden'));
+      return;
+    }
+
+    posts.forEach(post => {
+      const postTags = post.getAttribute('data-tags').split(' ');
+      const hasAllTags = Array.from(activeTags).every(tag => postTags.includes(tag));
+      if (hasAllTags) {
+        post.classList.remove('hidden');
+      } else {
+        post.classList.add('hidden');
+      }
+    });
+  }
 
   tagButtons.forEach(button => {
     button.addEventListener('click', function() {
       const tag = this.getAttribute('data-tag');
       
-      // Toggle active state
-      if (activeTag === tag) {
-        activeTag = null;
-        tagButtons.forEach(btn => btn.classList.remove('active'));
-        posts.forEach(post => post.classList.remove('hidden'));
+      if (activeTags.has(tag)) {
+        activeTags.delete(tag);
+        this.classList.remove('active');
       } else {
-        activeTag = tag;
-        tagButtons.forEach(btn => btn.classList.remove('active'));
+        activeTags.add(tag);
         this.classList.add('active');
-        
-        posts.forEach(post => {
-          const postTags = post.getAttribute('data-tags').split(' ');
-          if (!postTags.includes(tag)) {
-            post.classList.add('hidden');
-          } else {
-            post.classList.remove('hidden');
-          }
-        });
       }
+      
+      updatePosts();
     });
+  });
+
+  clearButton.addEventListener('click', function() {
+    activeTags.clear();
+    tagButtons.forEach(btn => btn.classList.remove('active'));
+    updatePosts();
   });
 });
 </script>
