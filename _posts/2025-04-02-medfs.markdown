@@ -1,0 +1,36 @@
+---
+layout: post
+title: "MedFS: Pursuing Low Update Overhead via Metadata-Enabled Delta Compression  for Log-structured File System on Mobile Device"
+date: 2025-04-02 18:01:00 +0800
+tags: [reading, fast, delta compression, flash storage]
+---
+
+This paper was published in FAST'25. It explores the use of delta compression to reduce write traffic on mobile devices' flash storage. Delta compression works by maintaining only the XORed data (called a delta chunk) between the original memory page and its updated version. When the original and updated pages are similar, the delta chunk is typically small—often just a few dozen bytes for a 4KB page. This approach minimizes written data and reduces daily full disk writes, extending flash storage lifespan. The paper's analysis shows that 77.1% of write traffic in real-world applications comes from file updates, where the difference between updated and original content is only 13.8%, making delta compression particularly effective. layout: post
+
+However, delta compression poses two key challenges. First, it requires additional metadata to link the original page with the corresponding delta chunk. Second, it creates write/read amplification because the system must process three components for writes/reads: the original page, the delta chunk, and related metadata (such as the in-page offset and size of the delta chunk). 
+
+This paper aims to address these challenges and enhance the lifetime of flash storage via delta compression.
+
+# Flash-friendly File System
+This paper focuses on [F2FS (flash-friendly file system)](https://www.usenix.org/conference/fast15/technical-sessions/presentation/lee), developed by Samsung to optimize the performance and lifespan use of NAND flash memory (a type of non-volatile storage technology that retains data even when the power is turned off) storage devices. F2FS uses a log-structured design, writing data sequentially, and a node-based structure to organize files. Specifically, F2FS includes [three types of nodes](https://www.kernel.org/doc/Documentation/filesystems/f2fs.txt): inode, direct node and indirect node.  An inode block is allocated 4KB and contains 923 data block pointers, which can collectively index a file with up to 3.69MB in the inline area.
+
+# Main Idea
+The idea is inspired by the observation that 90% of files generated or updated in modern applications are small files (i.e., less than 3.69MB). This indicates that the inline area in F2FS is often underutilized. This paper proposes maintaining deltas in the file’s inline area to improve space utilization. Once the inode is retrieved during the first file operation, the following file operations are highly likely to hit the inode in the cache. Storing deltas within the inode can effectively leverage high cache hit rates to reduce the access overhead of delta chunks.
+
+# Design Summary
+
+This paper presents MedFS to realize the above idea in F2FS. MedFS includes two key design components: (i) delta chunk inlining (DCI), which processes delta compression and manages chunks in the inline area, and (ii) delta chunk maintenance (DCM), which manages delta chunks in persistent storage.
+
+#### Delta Chunk Inlining
+
+DCI associates each delta chunk with two metadata fields: *delta index* that indicates the page address of its base page and *delta size* that represents the size of the delta chunk. DCI organizes these delta chunks and their metadata in the inline area, writing them from tail to head. The rationale is that as more data is added to a file, the pointer area (which contains pointers to data blocks or direct/indirect nodes) grows, and this tail-to-head organization ensures that pointer area growth does not interfere with the delta chunks.
+
+In addition, DCI manages delta chunks within the size constraints of the inline area. First, as the file size increases, the available space in the inline area decreases, prompting DCI to evict delta chunks using a FIFO strategy. However, it remains unclear in this paper that whether DCI reconstructs the full page for evicted delta chunks (disabling delta compression for such pages) or combines multiple delta chunks for storage in persistent storage, as processed by DCM (see below).
+
+Second, when the file receives a new delta chunk, DCI determines whether to replace an existing delta chunk by comparing their respective benefits. It normalizes the I/O latency of writing a new page based on the ratio of the size of the new delta chunk to the average size of all delta chunks. It also models the I/O latency overhead of replacement, which includes retrieving the base page of the existing delta chunk, performing decompression, and writing the decompressed full page into persistent storage. If the benefit of replacing the existing delta chunk outweighs the associated overhead, DCI performs the replacement.
+
+#### Delta Chunk Maintenance
+
+DCM manages delta chunks that are evicted or replaced from the inline area. It compacts these chunks into a compact page to maintain delta compression benefits. However, reading from compact pages causes read amplification, as it requires retrieving both delta chunks and their corresponding base pages (which are stored separately) for decompression. DCM determines whether to create compact pages based on file access patterns. For write-hot and read-cold files, DCM creates compact pages to reduce write I/O traffic. For other files, DCM simply flushes uncompressed data pages to avoid read amplification. 
+
+For decision-making, DCM uses a dynamic file hotness clustering approach. It tracks each file's read and write counts in real-time, along with their most recent I/O latencies, storing this information within the inode. Based on average read and write times, it categorizes files into four groups: read-hot/write-hot, read-hot/write-cold, read-cold/write-cold, and read-cold/write-hot. During system idle periods, DCM restores full pages for read-hot files by decompressing their delta chunks from compact pages.
