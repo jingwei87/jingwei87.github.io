@@ -20,7 +20,7 @@
 
 title: Jingwei's Homepage
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jingwei87.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
