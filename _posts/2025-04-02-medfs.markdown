@@ -2,7 +2,7 @@
 layout: post
 title: "MedFS: Pursuing Low Update Overhead via Metadata-Enabled Delta Compression  for Log-structured File System on Mobile Device"
 date: 2025-04-02 18:01:00 +0800
-tags: [reading, fast, delta compression, flash storage]
+tags: [fast, delta compression, flash storage]
 ---
 
 This paper was published in FAST'25. It explores the use of delta compression to reduce write traffic on mobile devices' flash storage. Delta compression works by maintaining only the XORed data (called a delta chunk) between the original memory page and its updated version. When the original and updated pages are similar, the delta chunk is typically small—often just a few dozen bytes for a 4KB page. This approach minimizes written data and reduces daily full disk writes, extending flash storage lifespan. The paper's analysis shows that 77.1% of write traffic in real-world applications comes from file updates, where the difference between updated and original content is only 13.8%, making delta compression particularly effective. layout: post

@@ -7,9 +7,11 @@ order: 1
 
 # 2025
 
+*  J. Zhao, Y. Ren, **J. Li**, and P. P. C. Lee, "SGX-Enabled Encrypted Cross-Cloud Data Synchronization," in *Proceedings of the IEEE International Conference on Distributed Computing Systems (ICDCS)*, 2025. (AR: 104/529 = 19.7%)
+
 *  Z. He, Z. Li, J. Luo, F. Luo, J. Duan, **J. Li**, S. Song, X. Luo, T. Chen, and X. Zhang, "Auspex: Unveiling Inconsistency Bugs of Transaction Fee Mechanism in Blockchain," in *Proceedings of the USENIX Security Symposium (Security)*, 2025.
 
-*  Z. He, Z. Li, A. Qiao, **J. Li**, F. Luo, S. Yang, G. Deng, S. Song, X. Zhang, T. Chen, and Xiapu Luo, "Maat: Analyzing and Optimizing Overcharge on Blockchain Storage," in *Proceedings of the USENIX Conference on File and Storage Technologies (FAST)*, 2025.
+*  Z. He, Z. Li, A. Qiao, **J. Li**, F. Luo, S. Yang, G. Deng, S. Song, X. Zhang, T. Chen, and X. Luo, "Maat: Analyzing and Optimizing Overcharge on Blockchain Storage," in *Proceedings of the USENIX Conference on File and Storage Technologies (FAST)*, 2025.
 
 *  王瑞锦, 王金波, 张凤荔, **李经纬**, 李增鹏, 陈厅, "联邦原型学习的特征图中毒攻击和双重防御机制," *软件学报*, vol. 36, no. 3, pp. 1355-1374, 2025.
 
@@ -19,7 +21,7 @@ order: 1
 
 # 2024
 
-*  Y. Ren, Y. Ren, X. Li, Y. Hu, **J. Li**, and P. P. C. Lee, "ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage," in *Proceedings of the USENIX Conference on File and Storage Technologies (FAST)*, 2024.
+*  Y. Ren, Y. Ren, X. Li, Y. Hu, **J. Li**, and P. P. C. Lee, "ELECT: Enabling Erasure Coding Tiering for LSM-tree-based Storage," in *Proceedings of the USENIX Conference on File and Storage Technologies (FAST)*, 2024. (AR: 22/123 = 17.9%)
 
 *  H. Xiao, **J. Li**, Y. Ren, R. Wang, and X. Zhang, "CDCache: Space-efficient Flash Caching via Compression-before-Deduplication," in *Proceedings of the IEEE International Conference on Computer Communications (INFOCOM)*, 2024.
 
