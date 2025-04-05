@@ -7,7 +7,7 @@ order: 3
 
 # PhD Students
 
-* **Yang, Jinyuan**, Sep 2022-now
+* **Yang, Jingyuan**, Sep 2022-now
 
 # Graduate Students
 
