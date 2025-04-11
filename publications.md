@@ -26,7 +26,7 @@ order: 1
 
 *  Hengying Xiao, **Jingwei Li**, Yanjing Ren, Ruijin Wang, and Xiaosong Zhang, "CDCache: Space-efficient Flash Caching via Compression-before-Deduplication," in *Proceedings of the IEEE International Conference on Computer Communications (INFOCOM)*, 2024. (AR: 256/1307 = 19.6%)
 
-*  Yuqiao Yang, Zhongjie Wu, Yongzhao Zhang, Ting Chen, Jun Li, Jie Yang, Wenhao Liu, Xiaosong Zhang, Ruicong Shi, **Jingwei Li**, Yu Jiang, and Zhuo Su, "UWBAD: Towards Effective and Imperceptible Jamming Attacks Against UWB Ranging Systems with COTS Chips," in *Proceedings of the ACM Conference on Computer and Communications Security (CCS)*, 2024.
+*  Yuqiao Yang, Zhongjie Wu, Yongzhao Zhang, Ting Chen, Jun Li, Jie Yang, Wenhao Liu, Xiaosong Zhang, Ruicong Shi, **Jingwei Li**, Yu Jiang, and Zhuo Su, "UWBAD: Towards Effective and Imperceptible Jamming Attacks Against UWB Ranging Systems with COTS Chips," in *Proceedings of the ACM Conference on Computer and Communications Security (CCS)*, 2024. (AR: 331/1964 = 16.9%)
 
 *  Jia Zhao, Zuoru Yang, **Jingwei Li**, and Patrick P. C. Lee, "Encrypted Data Reduction: Removing Redundancy from Encrypted Data in Outsourced Storage," *ACM Transactions on Storage*, vol. 20, no. 4, pp. 1-30, 2024.
 
