@@ -7,6 +7,8 @@ order: 1
 
 # 2025
 
+* Jingyuan Yang, Jun Wu, Ruilin Wu, **Jingwei Li**, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang, "ShieldReduce: Fine-Grained Shielded Data Reduction," in *Proceedings of the USENIX Annual Technical Conference (ATC)*, 2025. (AR: 100/634 = 15.8%)
+
 *  Jia Zhao, Yanjing Ren, **Jingwei Li**, and Patrick P. C. Lee, "SGX-Enabled Encrypted Cross-Cloud Data Synchronization," in *Proceedings of the IEEE International Conference on Distributed Computing Systems (ICDCS)*, 2025. (AR: 104/529 = 19.7%)
 
 *  Zheyuan He, Zihao Li, Jiahao Luo, Feng Luo, Junhan Duan, **Jingwei Li**, Shuwei Song, Xiapu Luo, Ting Chen, and Xiaosong Zhang, "Auspex: Unveiling Inconsistency Bugs of Transaction Fee Mechanism in Blockchain," in *Proceedings of the USENIX Security Symposium (Security)*, 2025.

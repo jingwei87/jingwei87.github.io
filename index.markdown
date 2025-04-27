@@ -12,6 +12,8 @@ His research focuses on **data storage security**, which aims to improve the ubi
 
 A selected list of papers in storage and security is shown below. 
 
+* **[ATC'25]** Jingyuan Yang, Jun Wu, Ruilin Wu, Jingwei Li, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang. ShieldReduce: Fine-Grained Shielded Data Reduction. In Proc. of USENIX ATC, 2025. 
+
 * **[Security'25]** Zheyuan He, Zihao Li, Jiahao Luo, Feng Luo, Junhan Duan, Jingwei Li, Shuwei Song, Xiapu Luo, Ting Chen, and Xiaosong Zhang. Auspex: Unveiling Inconsistency Bugs of Transaction Fee Mechanism in Blockchain. In Proc. of USENIX Security, 2025.
 
 * **[FAST'25]** Zheyuan He, Zihao Li*, ,Ao Qiao, Jingwei Li*, Feng Luo, Sen Yang, Gelei Deng, Shuwei Song, XiaoSong Zhang, Ting Chen, and Xiapu Luo. Maat: Analyzing and Optimizing Overcharge on Blockchain Storage. In Proc. of USENIX FAST, 2025.
