@@ -14,7 +14,7 @@ order: 4
 
 * USENIX Conference on File and Storage Technologies (FAST: 2026)
 
-* IEEE/IFIP International Conference on Dependable Systems and Networks (DSN: 2025)
+* IEEE/IFIP International Conference on Dependable Systems and Networks (DSN: 2025, 2026)
 
 * International Conference on Information and Communications Security (ICICS: 2023)
 
