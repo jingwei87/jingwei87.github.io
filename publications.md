@@ -51,7 +51,7 @@ order: 1
 
 *  Zuoru Yang, **Jingwei Li**, and Patrick P. C. Lee, "Secure and Lightweight Deduplicated Storage via Shielded Deduplication-Before-Encryption," in *Proceedings of the USENIX Annual Technical Conference (ATC)*, 2022. (AR: 64/393 = 16.3%)
 
-*  **Jingwei Li**, Guancheng Wei, Jiaheng Liang, Yanjing Ren, Patrick P. C. Lee, and Xiaosong Zhang, "Revisiting Frequency Analysis against Encrypted Deduplication via Statistical Distribution," in *Proceedings of the IEEE International Conference on Computer Communications (INFOCOM)*, 2022. (AR: 225/1129 = 19.9%)
+*  **Jingwei Li**, Guoli Wei, Jiacheng Liang, Yanjing Ren, Patrick P. C. Lee, and Xiaosong Zhang, "Revisiting Frequency Analysis against Encrypted Deduplication via Statistical Distribution," in *Proceedings of the IEEE International Conference on Computer Communications (INFOCOM)*, 2022. (AR: 225/1129 = 19.9%)
 
 *  Haomiao Yang, Mengyu Ge, Kai Xiang, and **Jingwei Li**, "Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks," *IEEE Transactions on Information Forensics and Security*, vol. 18, pp. 818-830, 2022.
 
