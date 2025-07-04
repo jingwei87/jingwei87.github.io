@@ -73,6 +73,8 @@ order: 1
 
 *  Ke Huang, Xiaosong Zhang, Yi Mu, Fatemeh Rezaeibagha, Xiaofen Wang, **Jingwei Li**, Qi Xia, and Jing Qin, "EVA: Efficient Versatile Auditing Scheme for IoT-based Datamarket in Jointcloud," *IEEE Internet of Things Journal (IoTJ)*, vol. 7, no. 2, pp. 882-892, 2020.
 
+* **Jingwei Li**, Patrick P. C. Lee, Chufeng Tan, Chuan Qin, and Xiaosong Zhang. "Information Leakage in Encrypted Deduplication via Frequency Analysis: Attacks and Defenses," *ACM Transactions on Storage (TOS)*, vol. 16, no. 1, pp. 4:1-4:30, 2020.
+
 # 2019
 
 *  **Jingwei Li**, Patrick P. C. Lee, Yanjing Ren, and Xiaosong Zhang, "Metadedup: Deduplicating Metadata in Encrypted Deduplication via Indirection," in *Proceeding of the International Conference on Massive Storage Systems and Technology (MSST)*, 2019. (AR: 21/71 = 29.6%)
