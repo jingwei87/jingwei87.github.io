@@ -11,17 +11,21 @@ order: 3
 
 # Graduate Students
 
-* **Wu, Ruilin**, Sep 2022-now
-
 * **Wu, Jun**, Sep 2023-now
 
 * **Zhang, Jia**, Sep 2023-now
 
-* **Zhang, Lizhi**, Dec 2023-now
-
 * **Wang, Ziyu**, Sep 2024-now
 
 * **Zou, Fang**, Sep 2024-now
+
+* **Sun, Jia**, Sep 2025-now
+
+* **Shi, Xianglong**, Sep 2025-now
+
+* **Zhu, Zixian**, Sep 2025-now
+
+* **Yao, Peng**, Sep 2025-now
 
 # Undergraduate Students
 
@@ -32,6 +36,9 @@ order: 3
 # Alumni
 
 # Graduate Students
+
+* **Wu, Ruilin**, Master, Sep 2022-Jun 2025
+  * First employment: 阿里云
 
 * **Xiao, Hengying**, Master, Sep 2021-Jun 2024
   * First employment: 华大九天
