@@ -7,6 +7,8 @@ order: 1
 
 # 2025
 
+* Yanjing Ren, Jia Zhao, **Jingwei Li**, and Patrick P. C. Lee, "An Analysis of Ethereum Workloads from a Key-Value Storage Perspective," in *Proceedings of the IEEE International Symposium on Workload Characterization (IISWC)*, 2025. (AR: 38/91 = 41.8%)
+
 * Jingyuan Yang, Jun Wu, Ruilin Wu, **Jingwei Li**, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang, "ShieldReduce: Fine-Grained Shielded Data Reduction," in *Proceedings of the USENIX Annual Technical Conference (ATC)*, 2025. (AR: 100/634 = 15.8%)
 
 *  Jia Zhao, Yanjing Ren, **Jingwei Li**, and Patrick P. C. Lee, "SGX-Enabled Encrypted Cross-Cloud Data Synchronization," in *Proceedings of the IEEE International Conference on Distributed Computing Systems (ICDCS)*, 2025. (AR: 104/529 = 19.7%)

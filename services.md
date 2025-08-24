@@ -12,6 +12,8 @@ order: 4
 
 # Selected Program Committees
 
+* ACM/IFIP International Middleware Conference (Middleware: 2026)
+
 * USENIX Conference on File and Storage Technologies (FAST: 2026)
 
 * IEEE/IFIP International Conference on Dependable Systems and Networks (DSN: 2025, 2026)
