@@ -7,9 +7,9 @@ order: 1
 
 # 2026
 
-* Yanjing Ren, Jingwei Li, and Patrick P. C. Lee, "SACK: Shielding Dynamic Attribute-based Access Control in Persistent Key-Value Stores," in *Proceedings of the VLDB Endowment (PVLDB)*, 2026.
+* Yanjing Ren, **Jingwei Li**, and Patrick P. C. Lee, "SACK: Shielding Dynamic Attribute-based Access Control in Persistent Key-Value Stores," in *Proceedings of the VLDB Endowment (PVLDB)*, 2026.
 
-* Jingyuan Yang, Jun Wu, Ruilin Wu, Jingwei Li, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang, "The Design and Implementation of a Fine-Grained Shielded Data Reduction System," *ACM Transactions on Storage (TOS)*, 2026.
+* Jingyuan Yang, Jun Wu, Ruilin Wu, **Jingwei Li**, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang, "The Design and Implementation of a Fine-Grained Shielded Data Reduction System," *ACM Transactions on Storage (TOS)*, 2026.
 
 # 2025
 
