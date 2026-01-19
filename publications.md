@@ -5,7 +5,15 @@ permalink: /publications/
 order: 1
 ---
 
+# 2026
+
+* Yanjing Ren, Jingwei Li, and Patrick P. C. Lee, "SACK: Shielding Dynamic Attribute-based Access Control in Persistent Key-Value Stores," in *Proceedings of the VLDB Endowment (PVLDB)*, 2026.
+
+* Jingyuan Yang, Jun Wu, Ruilin Wu, Jingwei Li, Patrick P. C. Lee, Xiong Li, and Xiaosong Zhang, "The Design and Implementation of a Fine-Grained Shielded Data Reduction System," *ACM Transactions on Storage (TOS)*, 2026.
+
 # 2025
+
+* Yan Wang, Sheng Cao, Jingwei Li, and Xiaosong Zhang, "A Unified Framework for Hybrid Network Intrusion Detection," *IEEE Transactions on Network and Service Management*, vol. 12, no. 6, pp. 5328-5347, 2025.
 
 * Yanjing Ren, Jia Zhao, **Jingwei Li**, and Patrick P. C. Lee, "An Analysis of Ethereum Workloads from a Key-Value Storage Perspective," in *Proceedings of the IEEE International Symposium on Workload Characterization (IISWC)*, 2025. (AR: 38/91 = 41.8%)
 
